@@ -1,3 +1,30 @@
 .content {
   @apply mx-auto max-w-[1440px] px-6;
 }
+
+#triangle {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+
+.bttn-join {
+    @apply mt-4 w-max rounded-xl bg-orange-500 text-xs font-semibold;
+    button {
+      @apply p-4;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bttn-join {
+        @apply static mt-0 text-base;
+      }
+  }
+  
+  @media (min-width: 1025px) {
+    .bttn-join {
+      @apply text-lg tracking-[1px];
+      button {
+        @apply p-6;
+      }
+    }
+  }
+  
