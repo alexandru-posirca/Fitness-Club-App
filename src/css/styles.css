@@ -1,3 +1,32 @@
 @import "tailwindcss/base";
+
+/* Custom components styles */
 @import "tailwindcss/components";
+
 @import "tailwindcss/utilities";
+
+@layer components {
+  h1 {
+    @apply font-bold;
+  }
+  p,
+  span {
+    @apply tracking-[0.3px] text-gray-dark-100;
+  }
+  h2 {
+    @apply font-semibold text-xl;
+  }
+  @media (min-width: 768px) {
+    h2 {
+      @apply text-[40px] leading-[50px];
+    }
+  }
+  ul {
+    @apply text-sm text-gray-dark-100 tracking-[0.5px];
+  }
+  @media (min-width: 768px) {
+    ul {
+      @apply text-[18px] leading-[24px];
+    }
+  }
+}
