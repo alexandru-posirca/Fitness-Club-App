@@ -3,6 +3,7 @@
 /* Custom components styles */
 @import "tailwindcss/components";
 @import "./components/common.css";
+@import "./components/card-workout.css";
 
 @import "tailwindcss/utilities";
 

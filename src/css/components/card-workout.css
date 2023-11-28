@@ -1,0 +1,35 @@
+.card-workout {
+    @apply w-max rounded-xl bg-gray-light-300 px-6 py-8;
+    h2 {
+      @apply mb-2 tracking-[0.5px];
+    }
+    .content-card-w {
+      @apply flex items-end;
+      p {
+        @apply w-[174px] text-xs tracking-[0.3px];
+      }
+    }
+    &:nth-child(even) {
+      @apply bg-gray-light-400;
+    }
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card-workout {
+      @apply mb-0 px-[38px] py-[53px];
+      h2 {
+        @apply mb-3 text-base;
+      }
+      .content-card-w {
+        p {
+          @apply w-[192px] text-sm leading-6;
+        }
+        img {
+          @apply ml-2 w-7;
+        }
+      }
+    }
+  }
