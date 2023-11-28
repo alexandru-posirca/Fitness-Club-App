@@ -2,6 +2,7 @@
 
 /* Custom components styles */
 @import "tailwindcss/components";
+@import "./components/common.css";
 
 @import "tailwindcss/utilities";
 

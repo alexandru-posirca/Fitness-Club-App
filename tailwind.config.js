@@ -8,6 +8,11 @@ module.exports = {
     "./dist/**/*.js"
   ],
   theme: {
+    screens: {
+      md: "768px",
+      lg: "1025px",
+      xl: "1440px"
+    },
     colors: {
       "white-main": "#FAFAF9",
       "black-main": "#171717",
