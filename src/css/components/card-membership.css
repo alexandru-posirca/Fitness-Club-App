@@ -1,0 +1,25 @@
+.card-membership {
+    @apply px-4 pt-10;
+    h2 {
+      @apply mb-3 flex justify-center tracking-[0.3px];
+    }
+    p {
+      @apply mb-2 text-sm;
+    }
+    ul {
+      @apply list-disc pl-[14px];
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card-membership {
+      @apply px-[68px] pt-[71px] w-max;
+      h2 {
+        @apply mb-[34px];
+      }
+      p {
+        @apply mb-4 w-[402px] text-[18px] leading-[24px];
+      }
+    }
+  }
+  
