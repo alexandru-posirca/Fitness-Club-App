@@ -948,6 +948,10 @@ ul {
   width: max-content;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
