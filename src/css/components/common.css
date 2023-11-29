@@ -13,7 +13,29 @@
     }
   }
 
+  .text-programs {
+    @apply mb-2 max-w-[642px] text-sm;
+  }
+
+  .more-details {
+    @apply mb-2 flex items-center;
+    a {
+      @apply mr-1 font-semibold tracking-[0.5px] text-blue-300;
+    }
+  }
+
   @media (min-width: 768px) {
+    .text-programs {
+        @apply mb-4 max-w-[480px];
+      }
+    .more-details {
+        a {
+          @apply mr-[9px];
+        }
+        img {
+          @apply w-7;
+        }
+      }
     .bttn-join {
         @apply static mt-0 text-base;
       }
@@ -26,5 +48,8 @@
         @apply p-6;
       }
     }
+    .text-programs {
+        @apply mb-7;
+      }
   }
   
