@@ -24,6 +24,13 @@
     }
   }
 
+  .btn-container {
+    @apply mb-[48px];
+    .btn {
+      @apply text-2xl uppercase;
+    }
+  }
+
   @media (min-width: 768px) {
     .text-programs {
         @apply mb-4 max-w-[480px];
@@ -38,6 +45,12 @@
       }
     .bttn-join {
         @apply static mt-0 text-base;
+      }
+      .btn-container {
+        @apply mb-0;
+        .btn {
+          @apply text-sm;
+        }
       }
   }
   
