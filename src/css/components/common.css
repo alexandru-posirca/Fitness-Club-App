@@ -31,6 +31,10 @@
     }
   }
 
+  .content-modal {
+    @apply fixed left-1/2 top-1/2 z-40 mx-auto w-[375px] shadow transition delay-150 ease-in-out;
+  }
+
   @media (min-width: 768px) {
     .text-programs {
         @apply mb-4 max-w-[480px];

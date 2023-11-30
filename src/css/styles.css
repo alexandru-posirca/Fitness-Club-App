@@ -6,6 +6,7 @@
 @import "./components/card-workout.css";
 @import "./components/card-membership";
 @import "./components/nav.css";
+@import "./components/join-club.css";
 
 @import "tailwindcss/utilities";
 

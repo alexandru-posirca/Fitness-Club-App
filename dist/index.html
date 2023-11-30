@@ -48,9 +48,10 @@
 
     <!-- Form Join Section -->
 
-    <div class="form-content-modal">
-      <div class="form-container">
-        <div class="form-sidebar">
+    <div class="form content-modal w-[375px] text-black-main md:w-[700px] lg:w-[958px] xl:w-auto xl:max-w-[100%]"
+    id="form">
+      <div class="form-container md:flex md:h-[600px] md:rounded-[15px] md:bg-white-main md:p-4">
+        <div class="form-sidebar relative flex h-[172px] items-start justify-center gap-4 bg-[url('./img/sidebar.png')] bg-cover bg-no-repeat px-12 py-8 md:h-auto md:flex-col md:justify-start md:gap-8 md:rounded-[10px] md:bg-[url('./img/sidebar-desktop.png')] md:pl-8 md:pr-[89px] md:pt-[50px]">
           <div class="step active">
             <div class="circle">1</div>
             <div class="step-content"></div>
@@ -78,8 +79,10 @@
               <b>Summary</b>
             </div>
           </div>
-          <div>
-            <button data-close-button>
+          <div class="absolute right-[9px] top-[10px] md:left-[9px] md:right-0">
+            <button 
+            data-close-button
+            class="close-button scale-[1.8] text-white-main">
               &times;
             </button>
           </div>

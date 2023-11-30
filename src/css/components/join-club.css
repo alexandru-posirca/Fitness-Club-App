@@ -1,0 +1,46 @@
+.form {
+    @apply translate-x-[-50%] translate-y-[-50%];
+    .form-container {
+    span,
+    p {
+      @apply text-black-main;
+    }
+    .form-sidebar {
+        .step {
+          @apply flex items-center text-sm leading-4;
+          .circle {
+            @apply flex h-[33px] w-[33px] items-center justify-center rounded-full border-2 border-solid border-white-main font-bold text-white-main;
+          }
+          &.active {
+            .circle {
+              @apply border-none bg-blue-100 text-blue-400;
+            }
+          }
+          .step-content {
+            @apply hidden;
+          }
+        }
+      }
+    }
+}
+
+@media (min-width: 768px) {
+    .form {
+        @apply translate-x-[-50%] translate-y-[-50%];
+        .form-container {
+            .form-sidebar {
+                .step {
+                  .step-content {
+                    @apply ml-4 block  gap-1 uppercase md:flex md:flex-col;
+                    span {
+                      @apply text-xs leading-[14px] text-blue-100;
+                    }
+                    b {
+                      @apply w-max tracking-[1px] text-white-main;
+                    }
+                  }
+                }
+              }
+        }
+    }
+}
