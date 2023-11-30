@@ -943,13 +943,13 @@ ul {
   width: 2rem;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[80\%\] {
-  width: 80%;
 }
 
 .max-w-\[800px\] {
