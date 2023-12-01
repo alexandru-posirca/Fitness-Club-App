@@ -88,6 +88,46 @@
           </div>
         </div>
          <!-- step-1 -->
+         <div class="stp step-1" id="step-1">
+           <div class="content-step">
+            <div class="header">
+              <h1 class="title">Personal info</h1>
+              <p class="exp">
+                Provide your info to unlock the next step.
+              </p>
+            </div>
+            <form name="personal-data" class="form-info">
+              <div class="label">
+                <label for="name" id="name-label">Name<span>*</span></label>
+                <span class="error-input hidden" id="name-error">
+                  First namme and last name, not special symbols.
+                </span>
+              </div>
+              <input type="text" required id="name" placeholder="Your name"/>
+              <div class="label">
+                <label for="email" id="email-label">Email<span>*</span></label>
+                <span class="error-input hideen" id="email-errorr">
+                  The email must comply with email standards.
+                </span>
+              </div>
+              <input type="email" id="email" required placeholder="Your email"/>
+              <div class="label">
+                <label for="phone" id="phone-label">
+                  Phone number<span>*</span>
+                </label>
+                <span class="error-input hidden" id="phone-error">
+                  The number must comply with RO standards.
+                </span>
+              </div>
+              <input type="phone" id="phone" required placeholder="Your phone">
+            </form>
+           </div>
+           <div class="bttns justify-end">
+            <button class="next-stp disable" id="bttn-step-1" type="submit" disabled>
+              Next Step
+            </button>
+           </div>
+         </div>
          <!-- end step-1 -->
       </div>
     </div>
