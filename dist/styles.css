@@ -1480,7 +1480,8 @@ ul {
           background-color: rgb(150 153 170 / var(--tw-bg-opacity));
         }
 
-.form .form-container .step-2 {
+.form .form-container .step-1,
+      .form .form-container .step-2 {
       display: none;
     }
 
@@ -1775,7 +1776,8 @@ ul {
           .form .form-container .stp.step-2 form {
             gap: 18px;
           }
-      .form .form-container .step-1 {
+      .form .form-container .step-1,
+           .form .form-container .step-2 {
         display: none;
       }
 }
