@@ -55,6 +55,36 @@
                 @apply mb-0;
               }
             }
+            .plan-card {
+              @apply mb-4 flex cursor-pointer items-center rounded-lg border-[1px] border-solid border-gray-dark-100 p-[14px];
+              .icon-plan {
+                @apply mr-[14px] h-max rounded-full;
+                img {
+                  @apply p-1;
+                }
+              }
+              .plan-info {
+                @apply flex flex-col;
+                b {
+                  @apply mb-[7px] font-medium leading-[18px] text-blue-400;
+                }
+                .plan-priced {
+                  @apply flex w-[100px];
+                  span {
+                    @apply text-sm text-gray-light-200;
+                  }
+                  .plan-per {
+                    @apply ml-1;
+                  }
+                }
+              }
+              &:last-child {
+                @apply mb-6;
+              }
+              &.selected {
+                @apply border-[1px] border-solid border-blue-400 bg-gray-light-50;
+              }
+            }
           }
         }
         .bttns {
@@ -64,6 +94,34 @@
           }
           .prev-stp {
             @apply text-sm font-medium leading-4 text-gray-light-200;
+          }
+        }
+        .switcher {
+          .slider {
+            @apply absolute inset-0 cursor-pointer bg-blue-400 transition duration-300;
+            -webkit-transition: 0.4s;
+            &.round {
+              @apply rounded-full;
+              &::before {
+                @apply rounded-full;
+              }
+            }
+            &::before {
+              @apply absolute bottom-1 left-1 h-3 w-3 bg-white-main transition duration-300 content-[""];
+            }
+          }
+          .switch {
+            input:checked + .slider::before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+          }
+          p {
+            @apply text-sm font-semibold leading-4 text-gray-light-200;
+            &.sw-active {
+              @apply text-blue-400;
+            }
           }
         }
         &.step-1 {
@@ -129,6 +187,29 @@
                 input {
                   @apply mb-6 py-[15px] text-base leading-[18px];
                 }
+                .plan-card {
+                  @apply mb-0 flex h-max flex-row items-start pb-4 pl-4 pr-[22px] pt-5;
+                  .icon-plan {
+                    @apply mr-0;
+                  }
+                  .plan-info {
+                    @apply ml-4 flex flex-col;
+                    b {
+                      @apply mb-[7px] text-base leading-[18px];
+                    }
+                    .plan-priced {
+                      span {
+                        @apply mb-[6px];
+                      }
+                    }
+                    p {
+                      @apply mb-[3px] block w-max text-xs leading-[14px] text-blue-400;
+                    }
+                  }
+                  &:last-child {
+                    @apply mb-0;
+                  }
+                }
               }
             }
             .bttns {
@@ -141,6 +222,14 @@
                 &:hover {
                   @apply text-blue-400;
                 }
+              }
+            }
+            .switcher {
+              @apply mt-4;
+            }
+            &.step-2 {
+              form {
+                @apply flex gap-[18px];
               }
             }
            }
@@ -174,7 +263,19 @@
                 @apply text-sm;
               }
             }
+            .plan-card {
+              @apply flex-col;
+              .icon-plan {
+                @apply mb-[39px];
+              }
+              .plan-info {
+                @apply ml-0;
+              }
+            }
           }
+        }
+        .switcher {
+          @apply mt-8;
         }
       }
     }
