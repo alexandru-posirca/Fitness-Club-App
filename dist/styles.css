@@ -958,6 +958,291 @@ ul {
           display: none;
         }
 
+.form .form-container .err {
+      border-width: 2px;
+    }
+
+.form .form-container .err {
+      border-style: solid;
+    }
+
+.form .form-container .err {
+      --tw-border-opacity: 1;
+      border-color: rgb(239 137 99 / var(--tw-border-opacity));
+    }
+
+.form .form-container .stp {
+      display: flex;
+    }
+
+.form .form-container .stp {
+      height: 522.8px;
+    }
+
+.form .form-container .stp {
+      flex-direction: column;
+    }
+
+.form .form-container .stp {
+      justify-content: space-between;
+    }
+
+.form .form-container .stp {
+      --tw-bg-opacity: 1;
+      background-color: rgb(190 226 253 / var(--tw-bg-opacity));
+    }
+
+.form .form-container .stp .content-step {
+        position: relative;
+      }
+
+.form .form-container .stp .content-step {
+        bottom: 73px;
+      }
+
+.form .form-container .stp .content-step {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+.form .form-container .stp .content-step {
+        border-radius: 10px;
+      }
+
+.form .form-container .stp .content-step {
+        --tw-bg-opacity: 1;
+        background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+      }
+
+.form .form-container .stp .content-step {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+.form .form-container .stp .content-step {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+.form .form-container .stp .content-step .header .title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+
+.form .form-container .stp .content-step .header .title {
+            line-height: 1.75rem;
+          }
+
+.form .form-container .stp .content-step .header .title {
+            --tw-text-opacity: 1;
+            color: rgb(2 41 89 / var(--tw-text-opacity));
+          }
+
+.form .form-container .stp .content-step .header .exp {
+            margin-bottom: 22px;
+          }
+
+.form .form-container .stp .content-step .header .exp {
+            margin-top: 9px;
+          }
+
+.form .form-container .stp .content-step .header .exp {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+
+.form .form-container .stp .content-step .header .exp {
+            line-height: 25px;
+          }
+
+.form .form-container .stp .content-step .header .exp {
+            --tw-text-opacity: 1;
+            color: rgb(150 153 170 / var(--tw-text-opacity));
+          }
+
+.form .form-container .stp .content-step form .label {
+            position: relative;
+          }
+
+.form .form-container .stp .content-step form .label {
+            margin-bottom: 0.5rem;
+          }
+
+.form .form-container .stp .content-step form .label {
+            font-size: 0.75rem;
+            line-height: 1rem;
+          }
+
+.form .form-container .stp .content-step form .label {
+            line-height: 14px;
+          }
+
+.form .form-container .stp .content-step form .label label {
+              margin-bottom: 0.25rem;
+            }
+
+.form .form-container .stp .content-step form .label label {
+              font-weight: 500;
+            }
+
+.form .form-container .stp .content-step form .label label span {
+                margin-left: 2px;
+              }
+
+.form .form-container .stp .content-step form .label label span {
+                --tw-text-opacity: 1;
+                color: rgb(238 55 74 / var(--tw-text-opacity));
+              }
+
+.form .form-container .stp .content-step form .label .error-input {
+              margin-top: 0.25rem;
+            }
+
+.form .form-container .stp .content-step form .label .error-input {
+              font-size: 0.75rem;
+              line-height: 1rem;
+            }
+
+.form .form-container .stp .content-step form .label .error-input {
+              --tw-text-opacity: 1;
+              color: rgb(238 55 74 / var(--tw-text-opacity));
+            }
+
+.form .form-container .stp .content-step form input {
+            margin-bottom: 1rem;
+          }
+
+.form .form-container .stp .content-step form input {
+            width: 100%;
+          }
+
+.form .form-container .stp .content-step form input {
+            border-radius: 4px;
+          }
+
+.form .form-container .stp .content-step form input {
+            border-width: 1px;
+          }
+
+.form .form-container .stp .content-step form input {
+            border-style: solid;
+          }
+
+.form .form-container .stp .content-step form input {
+            border-color: #EFEDE8a6;
+          }
+
+.form .form-container .stp .content-step form input {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+.form .form-container .stp .content-step form input {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+
+.form .form-container .stp .content-step form input {
+            font-size: 15px;
+          }
+
+.form .form-container .stp .content-step form input {
+            font-weight: 500;
+          }
+
+.form .form-container .stp .content-step form input {
+            line-height: 17px;
+          }
+
+.form .form-container .stp .content-step form input:last-child {
+              margin-bottom: 0px;
+            }
+
+.form .form-container .stp .bttns {
+        display: flex;
+      }
+
+.form .form-container .stp .bttns {
+        align-items: center;
+      }
+
+.form .form-container .stp .bttns {
+        justify-content: space-between;
+      }
+
+.form .form-container .stp .bttns {
+        --tw-bg-opacity: 1;
+        background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+      }
+
+.form .form-container .stp .bttns {
+        padding: 1rem;
+      }
+
+.form .form-container .stp .bttns {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+.form .form-container .stp .bttns {
+        line-height: 1rem;
+      }
+
+.form .form-container .stp .bttns .next-stp {
+          border-radius: 4px;
+        }
+
+.form .form-container .stp .bttns .next-stp {
+          --tw-bg-opacity: 1;
+          background-color: rgb(2 41 89 / var(--tw-bg-opacity));
+        }
+
+.form .form-container .stp .bttns .next-stp {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+.form .form-container .stp .bttns .next-stp {
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+        }
+
+.form .form-container .stp .bttns .next-stp {
+          font-weight: 500;
+        }
+
+.form .form-container .stp .bttns .next-stp {
+          --tw-text-opacity: 1;
+          color: rgb(250 250 249 / var(--tw-text-opacity));
+        }
+
+.form .form-container .stp .bttns .prev-stp {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+
+.form .form-container .stp .bttns .prev-stp {
+          font-weight: 500;
+        }
+
+.form .form-container .stp .bttns .prev-stp {
+          line-height: 1rem;
+        }
+
+.form .form-container .stp .bttns .prev-stp {
+          --tw-text-opacity: 1;
+          color: rgb(150 153 170 / var(--tw-text-opacity));
+        }
+
+.form .form-container .stp.step-1 .bttns {
+          justify-content: flex-end;
+        }
+
+.form .form-container .stp.step-1 .bttns .disable {
+            --tw-bg-opacity: 1;
+            background-color: rgb(150 153 170 / var(--tw-bg-opacity));
+          }
+
 @media (min-width: 768px) {
   .form {
     --tw-translate-x: -50%;
@@ -1008,6 +1293,193 @@ ul {
               --tw-text-opacity: 1;
               color: rgb(250 250 249 / var(--tw-text-opacity));
             }
+      .form .form-container .stp {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .form .form-container .stp {
+        display: flex;
+      }
+      .form .form-container .stp {
+        height: auto;
+      }
+      .form .form-container .stp {
+        width: 50%;
+      }
+      .form .form-container .stp {
+        flex-direction: column;
+      }
+      .form .form-container .stp {
+        justify-content: space-between;
+      }
+      .form .form-container .stp {
+        --tw-bg-opacity: 1;
+        background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+      }
+      .form .form-container .stp {
+        padding-left: 2.25rem;
+      }
+      .form .form-container .stp {
+        padding-right: 1.5rem;
+      }
+        .form .form-container .stp .content-step {
+          bottom: 0px;
+        }
+        .form .form-container .stp .content-step {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        .form .form-container .stp .content-step {
+          margin-bottom: 0px;
+        }
+        .form .form-container .stp .content-step {
+          margin-top: 1.75rem;
+        }
+        .form .form-container .stp .content-step {
+          padding: 0px;
+        }
+            .form .form-container .stp .content-step .header .title {
+              font-size: 28px;
+            }
+            .form .form-container .stp .content-step .header .title {
+              line-height: 37px;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              margin-bottom: 23px;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              margin-top: 11px;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              line-height: 1.75rem;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              letter-spacing: 0em;
+            }
+          .form .form-container .stp .content-step form {
+            margin-bottom: 8px;
+          }
+          .form .form-container .stp .content-step form {
+            flex-direction: column;
+          }
+            .form .form-container .stp .content-step form .label {
+              margin-bottom: 0.5rem;
+            }
+            .form .form-container .stp .content-step form .label {
+              display: flex;
+            }
+            .form .form-container .stp .content-step form .label {
+              flex-direction: column;
+            }
+            .form .form-container .stp .content-step form .label {
+              justify-content: space-between;
+            }
+            .form .form-container .stp .content-step form .label {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+            .form .form-container .stp .content-step form .label {
+              line-height: 1rem;
+            }
+              .form .form-container .stp .content-step form .label label {
+                font-size: 1rem;
+                line-height: 1.5rem;
+              }
+              .form .form-container .stp .content-step form .label .error-input {
+                margin-top: 2px;
+              }
+              .form .form-container .stp .content-step form .label .error-input {
+                font-size: 0.75rem;
+                line-height: 1rem;
+              }
+            .form .form-container .stp .content-step form input {
+              margin-bottom: 1.5rem;
+            }
+            .form .form-container .stp .content-step form input {
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+            .form .form-container .stp .content-step form input {
+              font-size: 1rem;
+              line-height: 1.5rem;
+            }
+            .form .form-container .stp .content-step form input {
+              line-height: 18px;
+            }
+        .form .form-container .stp .bttns {
+          margin-bottom: 1rem;
+        }
+        .form .form-container .stp .bttns {
+          margin-top: 0px;
+        }
+        .form .form-container .stp .bttns {
+          padding: 0px;
+        }
+          .form .form-container .stp .bttns .next-stp {
+            border-radius: 0.5rem;
+          }
+          .form .form-container .stp .bttns .next-stp {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+          }
+          .form .form-container .stp .bttns .next-stp {
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+          .form .form-container .stp .bttns .next-stp {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+          .form .form-container .stp .bttns .next-stp {
+            line-height: 18px;
+          }
+          .form .form-container .stp .bttns .prev-stp {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+          .form .form-container .stp .bttns .prev-stp {
+            line-height: 18px;
+          }
+            .form .form-container .stp .bttns .prev-stp:hover {
+              --tw-text-opacity: 1;
+              color: rgb(2 41 89 / var(--tw-text-opacity));
+            }
+}
+
+@media (min-width: 1440px) {
+      .form .form-container .stp {
+        width: auto;
+      }
+      .form .form-container .stp {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+        .form .form-container .stp .content-step {
+          margin-top: 2.5rem;
+        }
+        .form .form-container .stp .content-step {
+          width: 450px;
+        }
+            .form .form-container .stp .content-step .header .title {
+              font-size: 32px;
+            }
+            .form .form-container .stp .content-step .header .exp {
+              margin-bottom: 25px;
+            }
+          .form .form-container .stp .content-step form {
+            flex-direction: row;
+          }
+            .form .form-container .stp .content-step form .label {
+              flex-direction: row;
+            }
+              .form .form-container .stp .content-step form .label .error-input {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+              }
 }
 
 .absolute {

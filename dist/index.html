@@ -54,9 +54,10 @@
         <div class="form-sidebar relative flex h-[172px] items-start justify-center gap-4 bg-[url('./img/sidebar.png')] bg-cover bg-no-repeat px-12 py-8 md:h-auto md:flex-col md:justify-start md:gap-8 md:rounded-[10px] md:bg-[url('./img/sidebar-desktop.png')] md:pl-8 md:pr-[89px] md:pt-[50px]">
           <div class="step active">
             <div class="circle">1</div>
-            <div class="step-content"></div>
-            <span>Step 1</span>
-            <b>Your info</b>
+            <div class="step-content">
+              <span>Step 1</span>
+              <b>Your info</b>
+            </div>
           </div>
           <div class="step">
             <div class="circle">2</div>
@@ -106,7 +107,7 @@
               <input type="text" required id="name" placeholder="Your name"/>
               <div class="label">
                 <label for="email" id="email-label">Email<span>*</span></label>
-                <span class="error-input hideen" id="email-errorr">
+                <span class="error-input hidden" id="email-error">
                   The email must comply with email standards.
                 </span>
               </div>
