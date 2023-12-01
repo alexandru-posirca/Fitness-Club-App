@@ -1243,6 +1243,15 @@ ul {
             background-color: rgb(150 153 170 / var(--tw-bg-opacity));
           }
 
+.form .form-container .stp.step-2 .disable {
+          --tw-bg-opacity: 1;
+          background-color: rgb(150 153 170 / var(--tw-bg-opacity));
+        }
+
+.form .form-container .step-2 {
+      display: none;
+    }
+
 @media (min-width: 768px) {
   .form {
     --tw-translate-x: -50%;
@@ -1448,6 +1457,9 @@ ul {
               --tw-text-opacity: 1;
               color: rgb(2 41 89 / var(--tw-text-opacity));
             }
+      .form .form-container .step-1 {
+        display: none;
+      }
 }
 
 @media (min-width: 1440px) {
@@ -1582,6 +1594,10 @@ ul {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-\[-50px\] {
+  margin-top: -50px;
 }
 
 .mt-\[49px\] {
@@ -1756,9 +1772,24 @@ ul {
   background-color: rgb(122 41 220 / var(--tw-bg-opacity));
 }
 
+.bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(72 62 255 / var(--tw-bg-opacity));
+}
+
 .bg-white-main {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+}
+
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 175 126 / var(--tw-bg-opacity));
+}
+
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 129 142 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/img\/sidebar\.png\'\)\] {
