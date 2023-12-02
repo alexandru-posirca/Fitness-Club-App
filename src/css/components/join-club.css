@@ -110,6 +110,30 @@
               }
             }
           }
+          .selection-box {
+            .selected {
+              @apply border-2 border-solid border-purple-200 bg-gray-light-50;
+            }
+            .selected-plan {
+              .plan-name {
+                @apply mb-[3px] leading-4 text-blue-400;
+              }
+              .plan-price {
+                @apply font-bold text-blue-400;
+              }
+            }
+            .selected-addon {
+              .service-price {
+                @apply text-purple-200;
+              }
+            }
+            .total {
+              @apply flex justify-between px-4 text-sm text-gray-light-200;
+              & b {
+                @apply h-max text-base font-bold leading-5 text-purple-200;
+              }
+            }
+          }
         }
         .bttns {
           @apply flex items-center justify-between bg-white-main p-4 text-sm leading-4;
@@ -248,6 +272,22 @@
                   }
                   .price {
                     @apply text-sm;
+                  }
+                }
+              }
+              .selection-box {
+                .selected-plan {
+                  .plan-name {
+                    @apply mb-[7px] text-base leading-[18px];
+                  }
+                  .plan-price {
+                    @apply text-base leading-5;
+                  }
+                }
+                .total {
+                  @apply px-6;
+                  b {
+                    @apply ml-[50px] text-xl leading-5;
                   }
                 }
               }
