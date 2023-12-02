@@ -1732,7 +1732,8 @@ ul {
 
 .form .form-container .step-1,
       .form .form-container .step-2,
-      .form .form-container .step-3 {
+      .form .form-container .step-3,
+      .form .form-container .step-4 {
       display: none;
     }
 
@@ -2089,7 +2090,8 @@ ul {
           }
       .form .form-container .step-1,
            .form .form-container .step-2,
-           .form .form-container .step-3 {
+           .form .form-container .step-3,
+           .form .form-container .step-4 {
         display: none;
       }
 }
@@ -2720,6 +2722,11 @@ ul {
 
   .md\:z-10 {
     z-index: 10;
+  }
+
+  .md\:my-1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 
   .md\:my-9 {
