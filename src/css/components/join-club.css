@@ -85,6 +85,30 @@
                 @apply border-[1px] border-solid border-blue-400 bg-gray-light-50;
               }
             }
+            .box {
+              @apply mb-3 flex items-center rounded-lg border-[1px] border-solid border-gray-dark-100 px-4 pb-[10px] pt-3;
+              input {
+                @apply pointer-events-none mb-0 h-5 w-5 select-none accent-purple-200;
+              }
+              .description {
+                @apply ml-4 flex flex-col;
+                label {
+                  @apply pointer-events-none mb-[3px] text-sm font-medium leading-4 text-blue-400;
+                }
+                small {
+                  @apply text-xs leading-5 text-gray-light-200;
+                }
+              }
+              .price {
+                @apply ml-auto text-xs leading-5 text-purple-200;
+              }
+              &:last-child {
+                @apply mb-0;
+              }
+              &.ad-selected {
+                @apply border-[1px] border-solid border-purple-200 bg-gray-light-50;
+              }
+            }
           }
         }
         .bttns {
@@ -211,6 +235,20 @@
                     @apply mb-0;
                   }
                 }
+                .box {
+                  @apply cursor-pointer px-6 py-[14px];
+                  .description {
+                    label {
+                      @apply mb-[7px] text-base leading-[18px];
+                    }
+                    small {
+                      @apply text-sm;
+                    }
+                  }
+                  .price {
+                    @apply text-sm;
+                  }
+                }
               }
             }
             .bttns {
@@ -273,6 +311,9 @@
               .plan-info {
                 @apply ml-0;
               }
+            }
+            .box {
+              @apply py-[18px];
             }
           }
         }

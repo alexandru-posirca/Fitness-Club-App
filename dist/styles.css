@@ -1280,6 +1280,165 @@ ul {
               background-color: rgb(248 249 255 / var(--tw-bg-opacity));
             }
 
+.form .form-container .stp .content-step form .box {
+            margin-bottom: 0.75rem;
+          }
+
+.form .form-container .stp .content-step form .box {
+            display: flex;
+          }
+
+.form .form-container .stp .content-step form .box {
+            align-items: center;
+          }
+
+.form .form-container .stp .content-step form .box {
+            border-radius: 0.5rem;
+          }
+
+.form .form-container .stp .content-step form .box {
+            border-width: 1px;
+          }
+
+.form .form-container .stp .content-step form .box {
+            border-style: solid;
+          }
+
+.form .form-container .stp .content-step form .box {
+            border-color: #EFEDE8a6;
+          }
+
+.form .form-container .stp .content-step form .box {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+.form .form-container .stp .content-step form .box {
+            padding-bottom: 10px;
+          }
+
+.form .form-container .stp .content-step form .box {
+            padding-top: 0.75rem;
+          }
+
+.form .form-container .stp .content-step form .box input {
+              pointer-events: none;
+            }
+
+.form .form-container .stp .content-step form .box input {
+              margin-bottom: 0px;
+            }
+
+.form .form-container .stp .content-step form .box input {
+              height: 1.25rem;
+            }
+
+.form .form-container .stp .content-step form .box input {
+              width: 1.25rem;
+            }
+
+.form .form-container .stp .content-step form .box input {
+              -webkit-user-select: none;
+                 -moz-user-select: none;
+                      user-select: none;
+            }
+
+.form .form-container .stp .content-step form .box input {
+              accent-color: #483EFF;
+            }
+
+.form .form-container .stp .content-step form .box .description {
+              margin-left: 1rem;
+            }
+
+.form .form-container .stp .content-step form .box .description {
+              display: flex;
+            }
+
+.form .form-container .stp .content-step form .box .description {
+              flex-direction: column;
+            }
+
+.form .form-container .stp .content-step form .box .description label {
+                pointer-events: none;
+              }
+
+.form .form-container .stp .content-step form .box .description label {
+                margin-bottom: 3px;
+              }
+
+.form .form-container .stp .content-step form .box .description label {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+              }
+
+.form .form-container .stp .content-step form .box .description label {
+                font-weight: 500;
+              }
+
+.form .form-container .stp .content-step form .box .description label {
+                line-height: 1rem;
+              }
+
+.form .form-container .stp .content-step form .box .description label {
+                --tw-text-opacity: 1;
+                color: rgb(2 41 89 / var(--tw-text-opacity));
+              }
+
+.form .form-container .stp .content-step form .box .description small {
+                font-size: 0.75rem;
+                line-height: 1rem;
+              }
+
+.form .form-container .stp .content-step form .box .description small {
+                line-height: 1.25rem;
+              }
+
+.form .form-container .stp .content-step form .box .description small {
+                --tw-text-opacity: 1;
+                color: rgb(150 153 170 / var(--tw-text-opacity));
+              }
+
+.form .form-container .stp .content-step form .box .price {
+              margin-left: auto;
+            }
+
+.form .form-container .stp .content-step form .box .price {
+              font-size: 0.75rem;
+              line-height: 1rem;
+            }
+
+.form .form-container .stp .content-step form .box .price {
+              line-height: 1.25rem;
+            }
+
+.form .form-container .stp .content-step form .box .price {
+              --tw-text-opacity: 1;
+              color: rgb(72 62 255 / var(--tw-text-opacity));
+            }
+
+.form .form-container .stp .content-step form .box:last-child {
+              margin-bottom: 0px;
+            }
+
+.form .form-container .stp .content-step form .box.ad-selected {
+              border-width: 1px;
+            }
+
+.form .form-container .stp .content-step form .box.ad-selected {
+              border-style: solid;
+            }
+
+.form .form-container .stp .content-step form .box.ad-selected {
+              --tw-border-opacity: 1;
+              border-color: rgb(72 62 255 / var(--tw-border-opacity));
+            }
+
+.form .form-container .stp .content-step form .box.ad-selected {
+              --tw-bg-opacity: 1;
+              background-color: rgb(248 249 255 / var(--tw-bg-opacity));
+            }
+
 .form .form-container .stp .bttns {
         display: flex;
       }
@@ -1729,6 +1888,35 @@ ul {
               .form .form-container .stp .content-step form .plan-card:last-child {
                 margin-bottom: 0px;
               }
+            .form .form-container .stp .content-step form .box {
+              cursor: pointer;
+            }
+            .form .form-container .stp .content-step form .box {
+              padding-left: 1.5rem;
+              padding-right: 1.5rem;
+            }
+            .form .form-container .stp .content-step form .box {
+              padding-top: 14px;
+              padding-bottom: 14px;
+            }
+                .form .form-container .stp .content-step form .box .description label {
+                  margin-bottom: 7px;
+                }
+                .form .form-container .stp .content-step form .box .description label {
+                  font-size: 1rem;
+                  line-height: 1.5rem;
+                }
+                .form .form-container .stp .content-step form .box .description label {
+                  line-height: 18px;
+                }
+                .form .form-container .stp .content-step form .box .description small {
+                  font-size: 0.875rem;
+                  line-height: 1.25rem;
+                }
+              .form .form-container .stp .content-step form .box .price {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+              }
         .form .form-container .stp .bttns {
           margin-bottom: 1rem;
         }
@@ -1821,6 +2009,10 @@ ul {
               .form .form-container .stp .content-step form .plan-card .plan-info {
                 margin-left: 0px;
               }
+            .form .form-container .stp .content-step form .box {
+              padding-top: 18px;
+              padding-bottom: 18px;
+            }
         .form .form-container .stp .switcher {
           margin-top: 2rem;
         }
@@ -1903,6 +2095,10 @@ ul {
 
 .mb-\[120px\] {
   margin-bottom: 120px;
+}
+
+.mb-\[66px\] {
+  margin-bottom: 66px;
 }
 
 .ml-1 {
