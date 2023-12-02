@@ -35,6 +35,9 @@
             .exp {
               @apply mb-[22px] mt-[9px] text-sm leading-[25px] text-gray-light-200;
             }
+            .exp-thank {
+              @apply tracking-normal;
+            }
           }
           form {
             .label {
@@ -222,6 +225,9 @@
                 }
                 .exp {
                   @apply mb-[23px] mt-[11px] text-sm leading-7 tracking-normal;
+                }
+                .exp-thank {
+                  @apply mt-[14px] w-full;
                 }
               }
               form {
