@@ -1,5 +1,8 @@
 .form {
-    @apply translate-x-[-50%] translate-y-[-50%];
+    @apply translate-x-[-50%] translate-y-[-50%] scale-0;
+    &.active {
+      @apply translate-x-[-50%] translate-y-[-50%] scale-100;
+    }
     .form-container {
     span,
     p {
@@ -199,7 +202,10 @@
 
 @media (min-width: 768px) {
     .form {
-        @apply translate-x-[-50%] translate-y-[-50%];
+        @apply translate-x-[-50%] translate-y-[-50%] scale-0;
+        &.active {
+          @apply translate-x-[-50%] translate-y-[-50%] scale-100;
+        }
         .form-container {
             .form-sidebar {
                 .step {
