@@ -1,3 +1,17 @@
+#overlay {
+  @apply pointer-events-none opacity-0 fixed inset-0 z-20 bg-gray-dark-100 transition delay-150 ease-in-out;
+  &.active {
+    @apply pointer-events-auto opacity-100;
+  }
+}
+
+.modal-join-club {
+  @apply translate-x-[-50%] translate-y-[-50%] scale-0;
+  &.active {
+    @apply translate-x-[-50%] translate-y-[-50%] scale-100;
+  }
+}
+
 #popup {
   &.open-popup {
     @apply flex translate-y-[-50%] scale-100;
