@@ -1,0 +1,13 @@
+#popup {
+  &.open-popup {
+    @apply flex translate-y-[-50%] scale-100;
+  }
+}
+
+@media (min-width: 768px) {
+  #popup {
+    &.open-popup {
+      @apply top-[180px] flex translate-y-[-50%] scale-100;
+    }
+  }
+}

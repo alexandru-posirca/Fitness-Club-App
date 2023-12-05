@@ -7,6 +7,7 @@
 @import "./components/card-membership";
 @import "./components/nav.css";
 @import "./components/join-club.css";
+@import "./components/google-auth.css";
 
 @import "tailwindcss/utilities";
 
