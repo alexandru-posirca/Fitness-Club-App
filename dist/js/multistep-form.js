@@ -6,6 +6,7 @@ const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const phoneError = document.getElementById("phone-error");
 const valuesInputs = document.querySelectorAll("#name, #email, #phone");
+const bttnDisable = document.getElementById("bttn-step-1");
 
 const validateForm = () => {
   valuesInputs.forEach((input) => {
@@ -61,3 +62,26 @@ const validateForm = () => {
 };
 
 validateForm();
+
+
+const checkDisable = () => {
+  valuesInputs.forEach((input) => {
+    input.addEventListener("keyup", () => {
+      const value = input.value;
+      if (
+        value === "" ||
+        phoneError.style.display == "block" ||
+        nameError.style.display == "block" ||
+        emailError.style.display == "block"
+      ) {
+        bttnDisable.disabled = true;
+        bttnDisable.classList.add("disable");
+      } else {
+        bttnDisable.disabled = false;
+        bttnDisable.classList.remove("disable");
+      }
+    });
+  });
+};
+
+checkDisable();
