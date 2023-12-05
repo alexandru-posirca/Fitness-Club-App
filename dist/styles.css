@@ -2370,11 +2370,6 @@ ul {
   margin-bottom: 1.25rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -2473,10 +2468,6 @@ ul {
 
 .mt-\[49px\] {
   margin-top: 49px;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .block {
@@ -3221,10 +3212,6 @@ ul {
   .md\:w-max {
     width: -moz-max-content;
     width: max-content;
-  }
-
-  .md\:w-8 {
-    width: 2rem;
   }
 
   .md\:flex-row-reverse {
