@@ -8,6 +8,40 @@ const phoneError = document.getElementById("phone-error");
 const valuesInputs = document.querySelectorAll("#name, #email, #phone");
 const bttnDisable = document.getElementById("bttn-step-1");
 
+let currentStep = 1;
+let currentCircle = 0;
+
+steps.forEach((step) => {
+    const nextBtn = step.querySelector(".next-stp");
+    const prevBtn = step.querySelector(".prev-stp");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        document.querySelector(`.step-${currentStep}`).style.display = "none";
+        currentStep--;
+        console.log(currentStep + " step steps");
+        document.querySelector(`.step-${currentStep}`).style.display = "flex";
+        circleSteps[currentCircle].classList.remove("active");
+        currentCircle--;
+        console.log(currentCircle + " circle steps");
+      });
+    }
+    nextBtn.addEventListener("click", () => {
+      document.querySelector(`.step-${currentStep}`).style.display = "none";
+      if (currentStep < 5) {
+        currentStep++;
+        console.log(currentStep + " step");
+        currentCircle++;
+        console.log(currentCircle + " circle");
+        setTotal();
+      }
+      document.querySelector(`.step-${currentStep}`).style.display = "flex";
+  
+      circleSteps[currentCircle].classList.add("active");
+      const stepOne = document.getElementById("step-1");
+      stepOne.style.display = "none";
+    });
+  });
+
 const validateForm = () => {
   valuesInputs.forEach((input) => {
     input.addEventListener("keyup", () => {
