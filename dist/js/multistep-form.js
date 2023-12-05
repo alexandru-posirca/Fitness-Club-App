@@ -1,4 +1,5 @@
 const steps = document.querySelectorAll(".stp");
+const circleSteps = document.querySelectorAll(".step");
 const nameField = document.getElementById("name");
 const emailField = document.getElementById("email");
 const phoneField = document.getElementById("phone");
@@ -7,40 +8,47 @@ const emailError = document.getElementById("email-error");
 const phoneError = document.getElementById("phone-error");
 const valuesInputs = document.querySelectorAll("#name, #email, #phone");
 const bttnDisable = document.getElementById("bttn-step-1");
+const bttnTwoDisable = document.getElementById("bttn-step-2");
+const plans = document.querySelectorAll(".plan-card");
+const planPrice = document.querySelector(".plan-price");
 
 let currentStep = 1;
 let currentCircle = 0;
+const obj = {
+  plan: null,
+  price: null,
+};
 
 steps.forEach((step) => {
-    const nextBtn = step.querySelector(".next-stp");
-    const prevBtn = step.querySelector(".prev-stp");
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        document.querySelector(`.step-${currentStep}`).style.display = "none";
-        currentStep--;
-        console.log(currentStep + " step steps");
-        document.querySelector(`.step-${currentStep}`).style.display = "flex";
-        circleSteps[currentCircle].classList.remove("active");
-        currentCircle--;
-        console.log(currentCircle + " circle steps");
-      });
-    }
-    nextBtn.addEventListener("click", () => {
+  const nextBtn = step.querySelector(".next-stp");
+  const prevBtn = step.querySelector(".prev-stp");
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
       document.querySelector(`.step-${currentStep}`).style.display = "none";
-      if (currentStep < 5) {
-        currentStep++;
-        console.log(currentStep + " step");
-        currentCircle++;
-        console.log(currentCircle + " circle");
-        setTotal();
-      }
+      currentStep--;
+      console.log(currentStep + " step steps");
       document.querySelector(`.step-${currentStep}`).style.display = "flex";
-  
-      circleSteps[currentCircle].classList.add("active");
-      const stepOne = document.getElementById("step-1");
-      stepOne.style.display = "none";
+      circleSteps[currentCircle].classList.remove("active");
+      currentCircle--;
+      console.log(currentCircle + " circle steps");
     });
+  }
+  nextBtn.addEventListener("click", () => {
+    document.querySelector(`.step-${currentStep}`).style.display = "none";
+    if (currentStep < 5) {
+      currentStep++;
+      console.log(currentStep + " step");
+      currentCircle++;
+      console.log(currentCircle + " circle");
+      setTotal();
+    }
+    document.querySelector(`.step-${currentStep}`).style.display = "flex";
+
+    circleSteps[currentCircle].classList.add("active");
+    const stepOne = document.getElementById("step-1");
+    stepOne.style.display = "none";
   });
+});
 
 const validateForm = () => {
   valuesInputs.forEach((input) => {
@@ -97,7 +105,6 @@ const validateForm = () => {
 
 validateForm();
 
-
 const checkDisable = () => {
   valuesInputs.forEach((input) => {
     input.addEventListener("keyup", () => {
@@ -119,3 +126,13 @@ const checkDisable = () => {
 };
 
 checkDisable();
+
+plans.forEach((plan) => {
+  plan.addEventListener("click", () => {
+    const planName = plan.querySelector("b");
+    const planPrice = plan.querySelector(".plan-priced");
+    obj.plan = planName;
+    obj.price = planPrice;
+    handleClick(plan);
+  });
+});
