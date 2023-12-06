@@ -13,6 +13,7 @@ const plans = document.querySelectorAll(".plan-card");
 const planPrice = document.querySelector(".plan-price");
 const total = document.querySelector(".total b");
 const switcher = document.querySelector(".switch");
+const addons = document.querySelectorAll(".box");
 
 let time;
 let currentStep = 1;
@@ -196,6 +197,23 @@ const switchPrice = (checked) => {
     setTime(false);
   }
 };
+
+addons.forEach((addon) => {
+  addon.addEventListener("click", (e) => {
+    const addonSelect = addon.querySelector("input");
+    const ID = addon.getAttribute("data-id");
+    if (addonSelect.checked) {
+      addonSelect.checked = false;
+      addon.classList.remove("ad-selected");
+      showAddon(ID, false);
+    } else {
+      addonSelect.checked = true;
+      addon.classList.add("ad-selected");
+      showAddon(addon, true);
+      e.preventDefault();
+    }
+  });
+});
 
 const setTotal = () => {
   let val = 0;
