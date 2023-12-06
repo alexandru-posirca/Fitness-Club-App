@@ -19,6 +19,7 @@ let currentStep = 1;
 let currentCircle = 0;
 const obj = {
   plan: null,
+  kind: null,
   price: null,
 };
 
@@ -141,51 +142,60 @@ plans.forEach((plan) => {
 });
 
 const handleClick = (elemClicked) => {
-    plans.forEach((plan) => {
-      if (plan === elemClicked) {
-        plan.classList.add("selected");
-      } else {
-        plan.classList.remove("selected");
-      }
-    });
-    bttnTwoDisable.disabled = false;
-    bttnTwoDisable.classList.remove("disable");
-  };
-
-  switcher.addEventListener("click", () => {
-    const val = switcher.querySelector("input").checked;
-    switchPrice(val);
-  });
-
-  const switchPrice = (checked) => {
-    const yearlyPrice = [90, 120, 150];
-    const monthlyPrice = [9, 12, 15];
-    const prices = document.querySelectorAll(".plan-priced");
-  
-    if (checked) {
-      prices[0].innerHTML =
-        `<span>$${yearlyPrice[0]}</span>` +
-        `<span class="plan-per"> - Yearly </span>`;
-      prices[1].innerHTML =
-        `<span>$${yearlyPrice[1]}</span>` +
-        `<span class="plan-per"> - Yearly </span>`;
-      prices[2].innerHTML =
-        `<span>$${yearlyPrice[2]}</span>` +
-        `<span class="plan-per"> - Yearly </span>`;
-      setTime(true);
+  plans.forEach((plan) => {
+    if (plan === elemClicked) {
+      plan.classList.add("selected");
     } else {
-      prices[0].innerHTML =
-        `<span>$${monthlyPrice[0]}</span>` +
-        `<span class="plan-per"> - Monthly </span>`;
-      prices[1].innerHTML =
-        `<span>$${monthlyPrice[1]}</span>` +
-        `<span class="plan-per"> - Monthly </span>`;
-      prices[2].innerHTML =
-        `<span>$${monthlyPrice[2]}</span>` +
-        `<span class="plan-per"> - Monthly </span>`;
-      setTime(false);
+      plan.classList.remove("selected");
     }
-  };
+  });
+  bttnTwoDisable.disabled = false;
+  bttnTwoDisable.classList.remove("disable");
+};
+
+switcher.addEventListener("click", () => {
+  const val = switcher.querySelector("input").checked;
+  if (val) {
+    console.log(val);
+    document.querySelector(".monthly").classList.remove("sw-active");
+    document.querySelector(".yearly").classList.add("sw-active");
+  } else {
+    document.querySelector(".monthly").classList.add("sw-active");
+    document.querySelector(".yearly").classList.remove("sw-active");
+  }
+  switchPrice(val);
+  obj.kind = val;
+});
+
+const switchPrice = (checked) => {
+  const yearlyPrice = [90, 120, 150];
+  const monthlyPrice = [9, 12, 15];
+  const prices = document.querySelectorAll(".plan-priced");
+
+  if (checked) {
+    prices[0].innerHTML =
+      `<span>$${yearlyPrice[0]}</span>` +
+      `<span class="plan-per"> - Yearly </span>`;
+    prices[1].innerHTML =
+      `<span>$${yearlyPrice[1]}</span>` +
+      `<span class="plan-per"> - Yearly </span>`;
+    prices[2].innerHTML =
+      `<span>$${yearlyPrice[2]}</span>` +
+      `<span class="plan-per"> - Yearly </span>`;
+    setTime(true);
+  } else {
+    prices[0].innerHTML =
+      `<span>$${monthlyPrice[0]}</span>` +
+      `<span class="plan-per"> - Monthly </span>`;
+    prices[1].innerHTML =
+      `<span>$${monthlyPrice[1]}</span>` +
+      `<span class="plan-per"> - Monthly </span>`;
+    prices[2].innerHTML =
+      `<span>$${monthlyPrice[2]}</span>` +
+      `<span class="plan-per"> - Monthly </span>`;
+    setTime(false);
+  }
+};
 
 const setTotal = () => {
   let val = 0;
