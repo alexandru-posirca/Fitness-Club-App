@@ -56,6 +56,7 @@ steps.forEach((step) => {
     circleSteps[currentCircle].classList.add("active");
     const stepOne = document.getElementById("step-1");
     stepOne.style.display = "none";
+    summary(obj);
   });
 });
 
@@ -156,6 +157,21 @@ plans.forEach((plan) => {
     handleClick(plan);
   });
 });
+
+const summary = (obj) => {
+  const planName = document.querySelector(".plan-name");
+  const planPrice = document.querySelector(".plan-price");
+  console.log(planName.innerHTML);
+  console.log(planPrice.innerHTML);
+  if (obj.plan !== null) {
+    planName.innerHTML = `${obj.plan.innerText} (${
+      obj.kind ? "yearly" : "monthly"
+    })`;
+  }
+  if (obj.price !== null) {
+    planPrice.innerHTML = `${obj.price.innerText}`;
+  }
+};
 
 const handleClick = (elemClicked) => {
   plans.forEach((plan) => {
