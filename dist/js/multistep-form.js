@@ -12,6 +12,7 @@ const bttnTwoDisable = document.getElementById("bttn-step-2");
 const plans = document.querySelectorAll(".plan-card");
 const planPrice = document.querySelector(".plan-price");
 const total = document.querySelector(".total b");
+const switcher = document.querySelector(".switch");
 
 let time;
 let currentStep = 1;
@@ -149,6 +150,41 @@ const handleClick = (elemClicked) => {
     });
     bttnTwoDisable.disabled = false;
     bttnTwoDisable.classList.remove("disable");
+  };
+
+  switcher.addEventListener("click", () => {
+    const val = switcher.querySelector("input").checked;
+    switchPrice(val);
+  });
+
+  const switchPrice = (checked) => {
+    const yearlyPrice = [90, 120, 150];
+    const monthlyPrice = [9, 12, 15];
+    const prices = document.querySelectorAll(".plan-priced");
+  
+    if (checked) {
+      prices[0].innerHTML =
+        `<span>$${yearlyPrice[0]}</span>` +
+        `<span class="plan-per"> - Yearly </span>`;
+      prices[1].innerHTML =
+        `<span>$${yearlyPrice[1]}</span>` +
+        `<span class="plan-per"> - Yearly </span>`;
+      prices[2].innerHTML =
+        `<span>$${yearlyPrice[2]}</span>` +
+        `<span class="plan-per"> - Yearly </span>`;
+      setTime(true);
+    } else {
+      prices[0].innerHTML =
+        `<span>$${monthlyPrice[0]}</span>` +
+        `<span class="plan-per"> - Monthly </span>`;
+      prices[1].innerHTML =
+        `<span>$${monthlyPrice[1]}</span>` +
+        `<span class="plan-per"> - Monthly </span>`;
+      prices[2].innerHTML =
+        `<span>$${monthlyPrice[2]}</span>` +
+        `<span class="plan-per"> - Monthly </span>`;
+      setTime(false);
+    }
   };
 
 const setTotal = () => {
