@@ -213,6 +213,36 @@ const switchPrice = (checked) => {
   }
 };
 
+closeModalBtn.forEach((button) => {
+  onAuthStateChanged(auth, (user) => {
+    if (user != null) {
+      button.addEventListener("click", () => {
+        document.querySelector(".monthly").classList.add("sw-active");
+        document.querySelector(".yearly").classList.remove("sw-active");
+
+        const checkbox = document.querySelector(
+          ".switch input[type='checkbox']"
+        );
+        checkbox.checked = false;
+
+        const monthlyPrice = [9, 12, 15];
+        const prices = document.querySelectorAll(".plan-priced");
+        prices[0].innerHTML =
+          `<span>$${monthlyPrice[0]}</span>` +
+          `<span class="plan-per"> - Monthly </span>`;
+        prices[1].innerHTML =
+          `<span>$${monthlyPrice[1]}</span>` +
+          `<span class="plan-per"> - Monthly </span>`;
+        prices[2].innerHTML =
+          `<span>$${monthlyPrice[2]}</span>` +
+          `<span class="plan-per"> - Monthly </span>`;
+        obj.kind = false;
+        setTime(false);
+      });
+    }
+  });
+});
+
 addons.forEach((addon) => {
   addon.addEventListener("click", (e) => {
     const addonSelect = addon.querySelector("input");
