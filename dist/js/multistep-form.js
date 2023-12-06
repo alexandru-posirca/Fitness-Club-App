@@ -139,9 +139,21 @@ plans.forEach((plan) => {
   });
 });
 
-const setTotal = () => {
-    let val = 0;
-    const str = planPrice.innerHTML;
-    const res = str.replace(/\D/g, "");
-    total.innerHTML = `$${val + Number(res)}/${time ? "yr" : "mo"}`;
+const handleClick = (elemClicked) => {
+    plans.forEach((plan) => {
+      if (plan === elemClicked) {
+        plan.classList.add("selected");
+      } else {
+        plan.classList.remove("selected");
+      }
+    });
+    bttnTwoDisable.disabled = false;
+    bttnTwoDisable.classList.remove("disable");
   };
+
+const setTotal = () => {
+  let val = 0;
+  const str = planPrice.innerHTML;
+  const res = str.replace(/\D/g, "");
+  total.innerHTML = `$${val + Number(res)}/${time ? "yr" : "mo"}`;
+};
