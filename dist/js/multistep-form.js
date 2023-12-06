@@ -11,7 +11,9 @@ const bttnDisable = document.getElementById("bttn-step-1");
 const bttnTwoDisable = document.getElementById("bttn-step-2");
 const plans = document.querySelectorAll(".plan-card");
 const planPrice = document.querySelector(".plan-price");
+const total = document.querySelector(".total b");
 
+let time;
 let currentStep = 1;
 let currentCircle = 0;
 const obj = {
@@ -136,3 +138,10 @@ plans.forEach((plan) => {
     handleClick(plan);
   });
 });
+
+const setTotal = () => {
+    let val = 0;
+    const str = planPrice.innerHTML;
+    const res = str.replace(/\D/g, "");
+    total.innerHTML = `$${val + Number(res)}/${time ? "yr" : "mo"}`;
+  };
