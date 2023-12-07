@@ -216,30 +216,38 @@ addons.forEach((addon) => {
 });
 
 const showAddon = (ad, val) => {
-    const temp = document.getElementsByTagName("template")[0];
-    const clone = temp.content.cloneNode(true);
-    const serviceName = clone.querySelector(".service-name");
-    const servicePrice = clone.querySelector(".service-price");
-    const serviceID = clone.querySelector(".selected-addon");
-    if (ad && val) {
-      serviceName.innerText = ad.querySelector("label").innerText;
-      servicePrice.innerText = ad.querySelector(".price").innerText;
-      serviceID.setAttribute("data-id", ad.dataset.id);
-      document.querySelector(".addons").appendChild(clone);
-    } else {
-      const addons = document.querySelectorAll(".selected-addon");
-      addons.forEach((addon) => {
-        const attr = addon.getAttribute("data-id");
-        if (attr == ad) {
-          addon.remove();
-        }
-      });
-    }
-  };
+  const temp = document.getElementsByTagName("template")[0];
+  const clone = temp.content.cloneNode(true);
+  const serviceName = clone.querySelector(".service-name");
+  const servicePrice = clone.querySelector(".service-price");
+  const serviceID = clone.querySelector(".selected-addon");
+  if (ad && val) {
+    serviceName.innerText = ad.querySelector("label").innerText;
+    servicePrice.innerText = ad.querySelector(".price").innerText;
+    serviceID.setAttribute("data-id", ad.dataset.id);
+    document.querySelector(".addons").appendChild(clone);
+  } else {
+    const addons = document.querySelectorAll(".selected-addon");
+    addons.forEach((addon) => {
+      const attr = addon.getAttribute("data-id");
+      if (attr == ad) {
+        addon.remove();
+      }
+    });
+  }
+};
 
 const setTotal = () => {
   let val = 0;
   const str = planPrice.innerHTML;
   const res = str.replace(/\D/g, "");
+  const addonPrices = document.querySelectorAll(
+    ".selected-addon .service-price"
+  );
+  for (let i = 0; i < addonPrices.length; i++) {
+    const str = addonPrices[i].innerHTML;
+    const res = str.replace(/\D/g, "");
+    val += Number(res);
+  }
   total.innerHTML = `$${val + Number(res)}/${time ? "yr" : "mo"}`;
 };
