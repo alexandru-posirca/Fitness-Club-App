@@ -57,6 +57,24 @@
      <!-- Modal Info Section -->
 
     <div class="my-account content-modal bg-white-main rounded-2xl w-auto max-w-[100%]" data-member="false" id="my-account">
+        <div class="modal-header flex justify-between p-2">
+          <h1 class="uppercase px-4 py-2 md:py-4 md:px-6 text-2xl leading-7 font-bold text-blue-400 md:text-[28px] md:leading-[37px]">Personal Info</h1>
+          <button data-close-button class="close-button text-gray-light-200 md:px-5 py-1 h-10 md:h-[63px]">&times;</button>
+        </div>
+        <div class="p-6 pt-0 md:p-8 md:pt-0">
+        <div id="info-profile">
+      <hr class="text-gray-light-200 my-4">
+        <div class="text-black-main flex flex-col items-end" id="reset-content">
+          <p class="text-sm text-blue-400 w-[321px] md:w-[365px]">You can refill your subscription plan until you receive a payment email.</p>
+          <div class="text-white-main w-max rounded-xl bg-orange-400 text-xs font-semibold md:static md:text-base lg:text-lg lg:tracking-[1px]">
+            <button class="p-4" id="reset-join" data-modal-target="#modal-join-club">Reset plan</button>
+          </div>
+        </div>
+      </div>
+      <div id="must-join">
+        <p class="text-blue-400 w-[321px] md:w-[365px]">You must join the fitness club to register and see info about your personal account.</p>
+      </div>
+    </div>
     </div>
 
     <!-- End Modal Info Section -->
