@@ -2314,6 +2314,73 @@ ul {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+.my-account table {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+.my-account table th {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+.my-account table th {
+      font-weight: 600;
+    }
+
+.my-account table th {
+      --tw-text-opacity: 1;
+      color: rgb(48 48 48 / var(--tw-text-opacity));
+    }
+
+.my-account table td {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+.my-account table td {
+      font-weight: 400;
+    }
+
+.my-account table td {
+      --tw-text-opacity: 1;
+      color: rgb(150 153 170 / var(--tw-text-opacity));
+    }
+
+.my-account table #member-addons {
+      --tw-text-opacity: 1;
+      color: rgb(250 250 249 / var(--tw-text-opacity));
+    }
+
+@media (min-width: 768px) {
+    .my-account table {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+      .my-account table th {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .my-account table th {
+        font-weight: 600;
+      }
+      .my-account table th {
+        --tw-text-opacity: 1;
+        color: rgb(48 48 48 / var(--tw-text-opacity));
+      }
+      .my-account table td {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .my-account table td {
+        font-weight: 400;
+      }
+      .my-account table td {
+        --tw-text-opacity: 1;
+        color: rgb(150 153 170 / var(--tw-text-opacity));
+      }
+}
+
 .invisible {
   visibility: hidden;
 }

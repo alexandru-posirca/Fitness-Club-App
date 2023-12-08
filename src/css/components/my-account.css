@@ -3,4 +3,31 @@
     &.active {
       @apply translate-x-[-50%] translate-y-[-50%] scale-100;
     }
+    table {
+        @apply text-sm;
+        th {
+          @apply py-1 font-semibold text-gray-dark-200;
+        }
+        td {
+          @apply py-1 font-normal text-gray-light-200;
+        }
+        #member-addons {
+          @apply text-white-main;
+        }
+      }
+  }
+
+
+  @media (min-width: 768px) {
+    .my-account {
+      table {
+        @apply text-lg;
+        th {
+          @apply py-1 font-semibold text-gray-dark-200;
+        }
+        td {
+          @apply py-1 font-normal text-gray-light-200;
+        }
+      }
+    }
   }
