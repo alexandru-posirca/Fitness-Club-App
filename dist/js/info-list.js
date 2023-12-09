@@ -3,6 +3,10 @@ import { auth, db } from "./main.js";
 import {
   collection,
   addDoc,
+  getDocs,
+  query,
+  orderBy,
+  limit,
 } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
 
 const submitJoinBtn = document.getElementById("submit-join");
@@ -12,6 +16,15 @@ const phoneInput = document.getElementById("phone");
 const myAccount = document.getElementById("my-account");
 const bttnsJoinInput = document.querySelectorAll(".bttn-join button");
 const bttnsJoin = document.querySelectorAll(".bttn-join");
+const nameMember = document.getElementById("member-name");
+const emailMember = document.getElementById("member-email");
+const phoneMember = document.getElementById("member-phone");
+const statusMember = document.getElementById("member-status");
+const payMember = document.getElementById("member-pay");
+const dateMember = document.getElementById("member-date");
+const planMember = document.getElementById("member-plan");
+const addonsMember = document.getElementById("member-addons");
+const dataAccount = document.getElementById("data-account");
 
 const member = {
   addons: "No addons",
@@ -63,3 +76,37 @@ onAuthStateChanged(auth, (user) => {
     submitJoinBtn.onclick = submitJoin;
   }, 1000);
 });
+
+onAuthStateChanged(auth, (user) => {
+    if (user != null) {
+      const getAllDataOnce = async () => {
+        let dataInfoAttr = myAccount.getAttribute("data-member");
+        if (dataInfoAttr) {
+          const refDoc = collection(db, `membersclub/${user.uid}/memberInfo`);
+          const querySnapshot = await getDocs(
+            query(refDoc, orderBy("time_reg", "desc"), limit(1))
+          );
+          let addedElements = [];
+          let htmlContent = "";
+          querySnapshot.forEach((doc) => {
+            const member = doc.data();
+            nameMember.innerHTML = member.name;
+            emailMember.innerHTML = member.email;
+            phoneMember.innerHTML = member.phone;
+            statusMember.innerHTML = member.status_join;
+            dateMember.innerHTML = member.date_reg;
+            payMember.innerHTML = member.total_pay_$;
+            planMember.innerHTML = member.plan;
+            member.addons.forEach((elem) => {
+              if (addedElements.indexOf(elem) === -1) {
+                addedElements.push(elem);
+                htmlContent += `<td>${elem}</td>`;
+              }
+              addonsMember.innerHTML = htmlContent;
+            });
+          });
+        }
+      };
+      dataAccount.addEventListener("click", getAllDataOnce);
+    }
+  });
