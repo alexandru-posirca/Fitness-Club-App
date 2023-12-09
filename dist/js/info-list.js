@@ -37,6 +37,24 @@ const member = {
   total_pay_$: null,
 };
 
+const updateDateTime = () => {
+    const now = new Date();
+  
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+  
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+  
+    const dateNow = `${day}-${month}-${year}`;
+    const timeNow = `${hours}:${minutes}:${seconds}`;
+  
+    member.date_reg = dateNow;
+    member.time_reg = timeNow;
+  };
+
 let allAddons = [];
 submitJoinBtn
   ? submitJoinBtn.addEventListener("click", () => {
@@ -58,6 +76,7 @@ submitJoinBtn
 
       member.total_pay_$ = valuePlan;
       member.plan = selectedPlan.innerText;
+      updateDateTime();
     })
   : false;
 
