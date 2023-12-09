@@ -157,3 +157,32 @@ onAuthStateChanged(auth, (user) => {
       dataAccount.addEventListener("click", getAllDataOnce);
     }
   });
+
+  window.addEventListener("load", () => {
+    onAuthStateChanged(auth, (user) => {
+      if (user != null) {
+        const storedValue = localStorage.getItem("status-join");
+        if (storedValue) {
+          bttnsJoin.forEach((bttn) => {
+            bttn.setAttribute("status-join", storedValue);
+            let statusJoin = bttn.getAttribute("status-join");
+            if (statusJoin) {
+              bttnsJoinInput.forEach((bttn) => {
+                bttn.disabled = true;
+                bttn.innerHTML = "Joining pending";
+              });
+            }
+          });
+        }
+        const infoActive = localStorage.getItem('info-active');
+        if(infoActive) {
+          infoProfile.classList.add('info-active');
+        }
+        const joinActive = localStorage.getItem('join-active');
+        if(joinActive) {
+          mustJoin.classList.add('join-active');
+        }
+      }
+    });
+  });
+  
