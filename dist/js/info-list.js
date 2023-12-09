@@ -25,6 +25,8 @@ const dateMember = document.getElementById("member-date");
 const planMember = document.getElementById("member-plan");
 const addonsMember = document.getElementById("member-addons");
 const dataAccount = document.getElementById("data-account");
+const infoProfile = document.getElementById('info-profile');
+const mustJoin = document.getElementById('must-join');
 
 const member = {
   addons: "No addons",
@@ -34,6 +36,32 @@ const member = {
   time_reg: null,
   total_pay_$: null,
 };
+
+let allAddons = [];
+submitJoinBtn
+  ? submitJoinBtn.addEventListener("click", () => {
+      addons.forEach((addon) => {
+        if (addon.classList.contains("ad-selected")) {
+          const addonSelect = addon.querySelector("label").innerText;
+          allAddons.push(addonSelect);
+        }
+      });
+
+      const matchResult = totalValue.innerText.match(/\d+/);
+      const valuePlan = matchResult ? matchResult[0] : "";
+
+      infoProfile.classList.add('info-active');
+      localStorage.setItem('info-active', true)
+
+      mustJoin.classList.add('join-active');
+      localStorage.setItem('join-active', true);
+
+      member.total_pay_$ = valuePlan;
+      member.plan = selectedPlan.innerText;
+    })
+  : false;
+
+member.addons = allAddons;
 
 onAuthStateChanged(auth, (user) => {
   const submitJoin = async () => {
