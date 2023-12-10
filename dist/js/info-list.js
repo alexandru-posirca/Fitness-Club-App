@@ -13,7 +13,9 @@ const submitJoinBtn = document.getElementById("submit-join");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
-const myAccount = document.getElementById("my-account");
+const addons = document.querySelectorAll(".box");
+const selectedPlan = document.querySelector(".plan-basic");
+const totalValue = document.querySelector(".total-value");
 const bttnsJoinInput = document.querySelectorAll(".bttn-join button");
 const bttnsJoin = document.querySelectorAll(".bttn-join");
 const nameMember = document.getElementById("member-name");
@@ -25,6 +27,7 @@ const dateMember = document.getElementById("member-date");
 const planMember = document.getElementById("member-plan");
 const addonsMember = document.getElementById("member-addons");
 const dataAccount = document.getElementById("data-account");
+const myAccount = document.getElementById("my-account");
 const infoProfile = document.getElementById('info-profile');
 const mustJoin = document.getElementById('must-join');
 
@@ -81,6 +84,18 @@ submitJoinBtn
   : false;
 
 member.addons = allAddons;
+
+onAuthStateChanged(auth, (user) => {
+    if (user == null) {
+      const checkAuth = () => {
+        let dataInfoAttr = dataAccount.getAttribute("data-info");
+        if (dataInfoAttr === "false") {
+          alert("You must be logged in to access account info");
+        }
+      };
+      dataAccount.addEventListener("click", checkAuth);
+    }
+  });
 
 onAuthStateChanged(auth, (user) => {
   const submitJoin = async () => {
