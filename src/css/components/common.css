@@ -1,5 +1,5 @@
 .content {
-  @apply mx-auto max-w-[1440px] px-6;
+  @apply mx-auto max-w-[1200px] px-6;
 }
 
 #triangle {
@@ -37,6 +37,20 @@
 
 .content-modal {
   @apply fixed left-1/2 top-1/2 z-40 mx-auto w-[375px] shadow transition delay-150 ease-in-out;
+}
+
+.join-active {
+  @apply hidden;
+}
+
+#info-profile {
+  @apply hidden;
+}
+
+#info-profile {
+  &.info-active {
+    @apply block;
+  }
 }
 
 @media (min-width: 768px) {

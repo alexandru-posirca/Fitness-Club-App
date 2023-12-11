@@ -576,7 +576,7 @@ ul {
 .content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
+  max-width: 1200px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -679,6 +679,18 @@ ul {
   transition-delay: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.join-active {
+  display: none;
+}
+
+#info-profile {
+  display: none;
+}
+
+#info-profile.info-active {
+    display: block;
+  }
 
 @media (min-width: 768px) {
   .text-programs {
@@ -784,10 +796,10 @@ ul {
 @media (min-width: 768px) {
   .card-workout {
     margin-bottom: 0px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 53px;
-    padding-bottom: 53px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
     .card-workout h2 {
       margin-bottom: 0.75rem;
@@ -797,7 +809,7 @@ ul {
       line-height: 1.5rem;
     }
       .card-workout .content-card-w p {
-        width: 192px;
+        width: 230px;
       }
       .card-workout .content-card-w p {
         font-size: 0.875rem;
@@ -811,6 +823,47 @@ ul {
       }
       .card-workout .content-card-w img {
         width: 1.75rem;
+      }
+}
+
+@media (min-width: 1025px) {
+  .card-workout {
+    margin-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-basis: 23%;
+  }
+      .card-workout .content-card-w p {
+        max-width: 132px;
+      }
+      .card-workout .content-card-w p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .card-workout .content-card-w p {
+        line-height: 1.5rem;
+      }
+}
+
+@media (min-width: 1440px) {
+  .card-workout {
+    margin-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+      .card-workout .content-card-w p {
+        max-width: 180px;
+      }
+      .card-workout .content-card-w p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .card-workout .content-card-w p {
+        line-height: 1.5rem;
       }
 }
 
@@ -879,13 +932,20 @@ ul {
 }
 
 .nav-list ul li {
-      margin-bottom: 36px;
+      margin-bottom: 2.25rem;
+    }
+
+.nav-list ul li {
+      width: -moz-max-content;
+      width: max-content;
     }
 
 @media (min-width: 768px) {
       .nav-list ul li {
-        margin-bottom: 0;
-        margin-left: 20px;
+        margin-bottom: 0px;
+      }
+      .nav-list ul li {
+        margin-left: 1.25rem;
       }
 }
 
@@ -2397,14 +2457,6 @@ ul {
   position: relative;
 }
 
-.bottom-12 {
-  bottom: 3rem;
-}
-
-.bottom-\[-64px\] {
-  bottom: -64px;
-}
-
 .left-1\/2 {
   left: 50%;
 }
@@ -2415,10 +2467,6 @@ ul {
 
 .right-0 {
   right: 0px;
-}
-
-.right-\[-10px\] {
-  right: -10px;
 }
 
 .right-\[9px\] {
@@ -2464,6 +2512,10 @@ ul {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.\!mb-0 {
+  margin-bottom: 0px !important;
 }
 
 .mb-1 {
@@ -2518,10 +2570,6 @@ ul {
   margin-left: 0.25rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -2548,6 +2596,10 @@ ul {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-6 {
@@ -2602,16 +2654,16 @@ ul {
   height: 1.25rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-8 {
-  height: 2rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-\[172px\] {
   height: 172px;
+}
+
+.h-\[361px\] {
+  height: 361px;
 }
 
 .h-max {
@@ -2631,12 +2683,12 @@ ul {
   width: 1.25rem;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-7 {
+  width: 1.75rem;
 }
 
-.w-8 {
-  width: 2rem;
+.w-\[250px\] {
+  width: 250px;
 }
 
 .w-\[321px\] {
@@ -2747,6 +2799,10 @@ ul {
   justify-content: flex-end;
 }
 
+.\!justify-center {
+  justify-content: center !important;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -2759,6 +2815,10 @@ ul {
   justify-content: space-around;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -2769,6 +2829,10 @@ ul {
 
 .gap-\[3px\] {
   gap: 3px;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-2xl {
@@ -2956,10 +3020,6 @@ ul {
   padding-right: 0.5rem;
 }
 
-.pr-8 {
-  padding-right: 2rem;
-}
-
 .pt-0 {
   padding-top: 0px;
 }
@@ -2987,6 +3047,10 @@ ul {
 
 .text-\[25px\] {
   font-size: 25px;
+}
+
+.text-\[52px\] {
+  font-size: 52px;
 }
 
 .text-lg {
@@ -3162,24 +3226,16 @@ ul {
     right: 0px;
   }
 
-  .md\:bottom-0 {
-    bottom: 0px;
-  }
-
   .md\:bottom-\[-118px\] {
     bottom: -118px;
   }
 
-  .md\:bottom-\[112px\] {
-    bottom: 112px;
+  .md\:bottom-\[18vw\] {
+    bottom: 18vw;
   }
 
-  .md\:bottom-\[130px\] {
-    bottom: 130px;
-  }
-
-  .md\:left-\[90px\] {
-    left: 90px;
+  .md\:left-10 {
+    left: 2.5rem;
   }
 
   .md\:left-\[9px\] {
@@ -3190,12 +3246,8 @@ ul {
     right: 0px;
   }
 
-  .md\:right-7 {
-    right: 1.75rem;
-  }
-
-  .md\:right-\[-74px\] {
-    right: -74px;
+  .md\:right-10 {
+    right: 2.5rem;
   }
 
   .md\:right-auto {
@@ -3204,14 +3256,6 @@ ul {
 
   .md\:top-0 {
     top: 0px;
-  }
-
-  .md\:top-\[-4px\] {
-    top: -4px;
-  }
-
-  .md\:top-\[52px\] {
-    top: 52px;
   }
 
   .md\:z-10 {
@@ -3264,12 +3308,12 @@ ul {
     margin-bottom: 5px;
   }
 
-  .md\:mb-\[8px\] {
-    margin-bottom: 8px;
-  }
-
   .md\:ml-2 {
     margin-left: 0.5rem;
+  }
+
+  .md\:ml-3 {
+    margin-left: 0.75rem;
   }
 
   .md\:ml-\[89px\] {
@@ -3296,16 +3340,12 @@ ul {
     margin-top: 1.75rem;
   }
 
-  .md\:mt-\[-168px\] {
-    margin-top: -168px;
+  .md\:mt-\[-160px\] {
+    margin-top: -160px;
   }
 
   .md\:mt-\[100px\] {
     margin-top: 100px;
-  }
-
-  .md\:mt-\[41px\] {
-    margin-top: 41px;
   }
 
   .md\:mt-\[50px\] {
@@ -3328,6 +3368,10 @@ ul {
     height: 2.5rem;
   }
 
+  .md\:h-\[535px\] {
+    height: 535px;
+  }
+
   .md\:h-\[600px\] {
     height: 600px;
   }
@@ -3344,8 +3388,8 @@ ul {
     width: 2.5rem;
   }
 
-  .md\:w-\[146\%\] {
-    width: 146%;
+  .md\:w-\[18\%\] {
+    width: 18%;
   }
 
   .md\:w-\[365px\] {
@@ -3376,9 +3420,8 @@ ul {
     width: 100%;
   }
 
-  .md\:w-max {
-    width: -moz-max-content;
-    width: max-content;
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:flex-row-reverse {
@@ -3397,10 +3440,6 @@ ul {
     align-items: center;
   }
 
-  .md\:justify-normal {
-    justify-content: normal;
-  }
-
   .md\:justify-start {
     justify-content: flex-start;
   }
@@ -3417,8 +3456,16 @@ ul {
     justify-content: space-around;
   }
 
+  .md\:gap-0 {
+    gap: 0px;
+  }
+
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:overflow-hidden {
+    overflow: hidden;
   }
 
   .md\:rounded-\[10px\] {
@@ -3455,11 +3502,6 @@ ul {
     padding: 2rem;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -3485,19 +3527,9 @@ ul {
     padding-right: 1.5rem;
   }
 
-  .md\:px-\[142px\] {
-    padding-left: 142px;
-    padding-right: 142px;
-  }
-
   .md\:px-\[18px\] {
     padding-left: 18px;
     padding-right: 18px;
-  }
-
-  .md\:px-\[64px\] {
-    padding-left: 64px;
-    padding-right: 64px;
   }
 
   .md\:px-\[92px\] {
@@ -3546,10 +3578,6 @@ ul {
     padding-right: 1rem;
   }
 
-  .md\:pr-\[230px\] {
-    padding-right: 230px;
-  }
-
   .md\:pr-\[89px\] {
     padding-right: 89px;
   }
@@ -3558,12 +3586,8 @@ ul {
     padding-top: 0px;
   }
 
-  .md\:pt-\[122px\] {
-    padding-top: 122px;
-  }
-
-  .md\:pt-\[251px\] {
-    padding-top: 251px;
+  .md\:pt-\[100px\] {
+    padding-top: 100px;
   }
 
   .md\:pt-\[50px\] {
@@ -3574,13 +3598,21 @@ ul {
     padding-top: 60px;
   }
 
+  .md\:pt-\[90px\] {
+    padding-top: 90px;
+  }
+
+  .md\:pt-\[98px\] {
+    padding-top: 98px;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .md\:text-\[10vw\] {
-    font-size: 10vw;
+  .md\:text-\[12vw\] {
+    font-size: 12vw;
   }
 
   .md\:text-\[13px\] {
@@ -3657,30 +3689,6 @@ ul {
 }
 
 @media (min-width: 1025px) {
-  .lg\:bottom-\[112px\] {
-    bottom: 112px;
-  }
-
-  .lg\:left-\[114px\] {
-    left: 114px;
-  }
-
-  .lg\:right-\[-138px\] {
-    right: -138px;
-  }
-
-  .lg\:right-\[-80px\] {
-    right: -80px;
-  }
-
-  .lg\:top-\[-30px\] {
-    top: -30px;
-  }
-
-  .lg\:top-\[56px\] {
-    top: 56px;
-  }
-
   .lg\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -3702,28 +3710,20 @@ ul {
     margin-left: 0.75rem;
   }
 
-  .lg\:ml-8 {
-    margin-left: 2rem;
+  .lg\:mt-\[-240px\] {
+    margin-top: -240px;
   }
 
-  .lg\:mt-\[-60px\] {
-    margin-top: -60px;
+  .lg\:block {
+    display: block;
   }
 
-  .lg\:w-\[172\%\] {
-    width: 172%;
-  }
-
-  .lg\:w-\[27\%\] {
-    width: 27%;
+  .lg\:w-\[33\%\] {
+    width: 33%;
   }
 
   .lg\:w-\[958px\] {
     width: 958px;
-  }
-
-  .lg\:max-w-\[599px\] {
-    max-width: 599px;
   }
 
   .lg\:justify-between {
@@ -3760,10 +3760,6 @@ ul {
     padding-bottom: 20px;
   }
 
-  .lg\:pr-\[197px\] {
-    padding-right: 197px;
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3774,8 +3770,8 @@ ul {
     line-height: 1;
   }
 
-  .lg\:text-\[11vw\] {
-    font-size: 11vw;
+  .lg\:text-\[11\.4vw\] {
+    font-size: 11.4vw;
   }
 
   .lg\:text-\[40px\] {
@@ -3808,54 +3804,30 @@ ul {
     line-height: 55px;
   }
 
-  .lg\:tracking-\[-5px\] {
-    letter-spacing: -5px;
-  }
-
   .lg\:tracking-\[1px\] {
     letter-spacing: 1px;
   }
 }
 
 @media (min-width: 1440px) {
-  .xl\:bottom-\[126px\] {
-    bottom: 126px;
-  }
-
-  .xl\:bottom-\[230px\] {
-    bottom: 230px;
-  }
-
-  .xl\:left-\[110px\] {
-    left: 110px;
+  .xl\:bottom-\[260px\] {
+    bottom: 260px;
   }
 
   .xl\:right-0 {
     right: 0px;
   }
 
-  .xl\:right-\[-246px\] {
-    right: -246px;
-  }
-
-  .xl\:right-\[-305px\] {
-    right: -305px;
-  }
-
-  .xl\:top-\[-23px\] {
-    top: -23px;
-  }
-
   .xl\:mb-0 {
     margin-bottom: 0px;
   }
 
-  .xl\:mr-\[69px\] {
-    margin-right: 69px;
+  .xl\:mb-2 {
+    margin-bottom: 0.5rem;
   }
 
-  .xl\:h-\[684px\] {
-    height: 684px;
+  .xl\:mr-\[69px\] {
+    margin-right: 69px;
   }
 
   .xl\:w-\[98\%\] {
@@ -3874,27 +3846,24 @@ ul {
     flex-direction: row;
   }
 
-  .xl\:pl-\[134px\] {
-    padding-left: 134px;
+  .xl\:px-\[128px\] {
+    padding-left: 128px;
+    padding-right: 128px;
   }
 
-  .xl\:pr-0 {
-    padding-right: 0px;
+  .xl\:text-\[164px\] {
+    font-size: 164px;
   }
 
-  .xl\:text-\[172px\] {
-    font-size: 172px;
-  }
-
-  .xl\:leading-\[170px\] {
-    line-height: 170px;
+  .xl\:leading-\[164px\] {
+    line-height: 164px;
   }
 
   .xl\:leading-\[70px\] {
     line-height: 70px;
   }
 
-  .xl\:tracking-\[-2px\] {
-    letter-spacing: -2px;
+  .xl\:tracking-\[-5px\] {
+    letter-spacing: -5px;
   }
 }

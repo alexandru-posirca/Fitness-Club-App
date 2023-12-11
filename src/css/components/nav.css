@@ -1,7 +1,7 @@
 .nav-list {
     ul {
       li {
-        margin-bottom: 36px;
+        @apply mb-9 w-max;
       }
     }
   }
@@ -10,8 +10,7 @@
     .nav-list {
       ul {
         li {
-          margin-bottom: 0;
-          margin-left: 20px;
+          @apply mb-0 ml-5;
         }
       }
     }
