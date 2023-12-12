@@ -1,12 +1,12 @@
 .card-workout {
-    @apply w-max rounded-xl bg-gray-light-300 px-6 py-8;
+    @apply w-max rounded-xl bg-gray-light-300 px-6 py-8 relative;
     h2 {
       @apply mb-2 tracking-[0.5px];
     }
     .content-card-w {
       @apply flex items-end;
       p {
-        @apply w-[174px] text-xs tracking-[0.3px];
+        @apply w-[231px] text-xs tracking-[0.3px];
       }
     }
     &:nth-child(even) {
@@ -15,21 +15,28 @@
     &:last-child {
       @apply mb-0;
     }
+    .arrow-card {
+      @apply absolute right-2 bottom-[72px];
+    }
   }
   
   @media (min-width: 768px) {
     .card-workout {
       @apply mb-0 px-[30px] py-[40px];
+      flex-basis: 23%;
       h2 {
         @apply mb-3 text-base;
       }
       .content-card-w {
         p {
-          @apply w-[230px] text-sm leading-6;
+          @apply w-[171px] text-sm leading-6;
         }
         img {
           @apply ml-2 w-7;
         }
+      }
+      .arrow-card {
+        @apply bottom-[122px];
       }
     }
   }
@@ -44,6 +51,9 @@
           @apply max-w-[132px] text-sm leading-6;
         }
       }
+      .arrow-card {
+        @apply right-2 bottom-[138px];
+      }
     }
   }
 
@@ -54,6 +64,9 @@
         p {
           @apply max-w-[180px] text-sm leading-6;
         }
+      }
+      .arrow-card {
+        @apply bottom-[113px];
       }
     }
   }
