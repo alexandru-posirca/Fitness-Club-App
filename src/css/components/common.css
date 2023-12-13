@@ -53,6 +53,15 @@
   }
 }
 
+.test-account {
+  p {
+    @apply text-[13px] text-gray-light-100;
+    span {
+      @apply text-gray-light-200 font-bold text-sm;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .text-programs {
     @apply mb-4 max-w-[480px];
@@ -77,6 +86,15 @@
       @apply text-sm;
     }
   }
+  .test-account {
+    p {
+      @apply text-base;
+      span {
+        @apply text-lg;
+      }
+    }
+  }
+  
 }
 
 @media (min-width: 1025px) {

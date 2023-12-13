@@ -1,5 +1,5 @@
 #overlay {
-  @apply pointer-events-none opacity-0 fixed inset-0 z-20 bg-gray-dark-100 transition delay-150 ease-in-out;
+  @apply pointer-events-none opacity-0 fixed inset-0 z-20 bg-[#000000a6] transition delay-150 ease-in-out;
   &.active {
     @apply pointer-events-auto opacity-100;
   }
@@ -21,7 +21,7 @@
 @media (min-width: 768px) {
   #popup {
     &.open-popup {
-      @apply top-[180px] flex translate-y-[-50%] scale-100;
+      @apply top-[136px] flex translate-y-[-50%] scale-100;
     }
   }
 }
