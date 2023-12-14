@@ -15,4 +15,5 @@ The design was implemented based on the Figma resource that I have attached belo
 * JavaScript
 
 **Figma design resource:** https://www.figma.com/file/DaKpk4DRssOTiJOUk053HI/Exploration-Workout-%26-Fitness---Landing-Page-(Community)?type=design&node-id=78%3A6&mode=dev
+
 **Website Deployed - LIVE:** https://fitness-club-app.pages.dev/
