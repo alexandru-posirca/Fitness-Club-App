@@ -30,6 +30,7 @@ const openModalJoin = (modalJoin) => {
   if (dataInfoAttr === "true") {
     modalJoin.classList.add("active");
     overlay.classList.add("active");
+    document.body.classList.add('active-modal');
   }
 };
 
@@ -37,6 +38,7 @@ const closeModalJoin = (modalJoin) => {
   if (modalJoin == null) return;
   modalJoin.classList.remove("active");
   overlay.classList.remove("active");
+  document.body.classList.remove('active-modal');
 };
 
 overlay.addEventListener("click", () => {

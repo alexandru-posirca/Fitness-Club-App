@@ -10,6 +10,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
 
 const submitJoinBtn = document.getElementById("submit-join");
+const cancelBtn = document.getElementById("bttn-cancel");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
@@ -32,7 +33,7 @@ const infoProfile = document.getElementById('info-profile');
 const mustJoin = document.getElementById('must-join');
 
 const member = {
-  addons: "No addons",
+  addons: ["No addons"],
   status_join: "Pending",
   plan: null,
   date_reg: null,
@@ -42,25 +43,27 @@ const member = {
 
 const updateDateTime = () => {
     const now = new Date();
-  
+
     const year = now.getFullYear();
     const month = String(now.getMonth() + 1).padStart(2, "0");
     const day = String(now.getDate()).padStart(2, "0");
-  
+
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
-  
+
     const dateNow = `${day}-${month}-${year}`;
     const timeNow = `${hours}:${minutes}:${seconds}`;
-  
+
     member.date_reg = dateNow;
     member.time_reg = timeNow;
   };
 
 let allAddons = [];
+
 submitJoinBtn
   ? submitJoinBtn.addEventListener("click", () => {
+    allAddons = [];
       addons.forEach((addon) => {
         if (addon.classList.contains("ad-selected")) {
           const addonSelect = addon.querySelector("label").innerText;
@@ -77,6 +80,10 @@ submitJoinBtn
       mustJoin.classList.add('join-active');
       localStorage.setItem('join-active', true);
 
+      localStorage.setItem('form-completed', 'true');
+
+      mustJoin.style.display = "none";
+
       member.total_pay_$ = valuePlan;
       member.plan = selectedPlan.innerText;
       updateDateTime();
@@ -90,7 +97,7 @@ onAuthStateChanged(auth, (user) => {
       const checkAuth = () => {
         let dataInfoAttr = dataAccount.getAttribute("data-info");
         if (dataInfoAttr === "false") {
-          alert("You must be logged in to access account info");
+          alert("You must be LOGGED IN to access account info");
         }
       };
       dataAccount.addEventListener("click", checkAuth);
@@ -114,12 +121,14 @@ onAuthStateChanged(auth, (user) => {
     });
 
     if (dataInfoAttr) {
+      const addonsToSend = allAddons.length > 0 ? allAddons : ["No addons"];
+
       const docRef = await addDoc(refCurrentUser, {
         name: nameInput.value,
         email: emailInput.value,
         phone: phoneInput.value,
         plan: member.plan,
-        addons: member.addons,
+        addons: addonsToSend,
         status_join: member.status_join,
         date_reg: member.date_reg,
         time_reg: member.time_reg,
@@ -173,16 +182,35 @@ onAuthStateChanged(auth, (user) => {
     }
   });
 
+cancelBtn.addEventListener("click", () => {
+  const confirmCancel = confirm("Are you sure you want to cancel your subscription?");
+  if(confirmCancel) {
+    localStorage.removeItem("status-join");
+    localStorage.removeItem("info-active");
+    localStorage.removeItem("join-active");
+    localStorage.removeItem("form-completed");
+
+    bttnsJoinInput.forEach(bttn => {
+      bttn.disabled = false;
+      bttn.innerHTML = "Join Club Now";
+    });
+
+    mustJoin.style.display = "flex";
+    infoProfile.classList.remove('info-active');
+    mustJoin.classList.remove('join-active');
+  }
+})
+
   window.addEventListener("load", () => {
     onAuthStateChanged(auth, (user) => {
       if (user != null) {
         const storedValue = localStorage.getItem("status-join");
         if (storedValue) {
-          bttnsJoin.forEach((bttn) => {
+          bttnsJoin.forEach(bttn => {
             bttn.setAttribute("status-join", storedValue);
             let statusJoin = bttn.getAttribute("status-join");
             if (statusJoin) {
-              bttnsJoinInput.forEach((bttn) => {
+              bttnsJoinInput.forEach(bttn => {
                 bttn.disabled = true;
                 bttn.innerHTML = "Joining pending";
               });
@@ -190,14 +218,13 @@ onAuthStateChanged(auth, (user) => {
           });
         }
         const infoActive = localStorage.getItem('info-active');
-        if(infoActive) {
-          infoProfile.classList.add('info-active');
-        }
+        infoActive && infoProfile.classList.add('info-active');
+
         const joinActive = localStorage.getItem('join-active');
-        if(joinActive) {
-          mustJoin.classList.add('join-active');
-        }
+        joinActive && mustJoin.classList.add('join-active');
+
+        const formCompleted = localStorage.getItem('form-completed');
+        formCompleted && (mustJoin.style.display = "none");
       }
     });
   });
-  
