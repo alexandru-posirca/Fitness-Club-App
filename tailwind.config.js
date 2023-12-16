@@ -46,7 +46,11 @@ module.exports = {
       },
       "red": "#EE374A",
       "pink": "#F9818E",
-      "green": "#6FD649"
+      "brown": "#8a2121",
+      "green": {
+        100: "#6fd649",
+        200: "#027202"
+      }
     },
     fontFamily: {
       inter: ["Inter", ...defaultTheme.fontFamily.sans],

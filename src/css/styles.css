@@ -14,7 +14,7 @@
 @layer base {
   @font-face {
     font-family: 'Inter';
-    src: url('../../dist/assets/fonts/InterVariable.woff2') format("woff2");
+    src: url('./assets/fonts/InterVariable.woff2') format("woff2");
   }
 }
 

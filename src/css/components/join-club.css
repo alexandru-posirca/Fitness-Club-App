@@ -211,7 +211,7 @@
             .form-sidebar {
                 .step {
                   .step-content {
-                    @apply ml-4 block  gap-1 uppercase md:flex md:flex-col;
+                    @apply ml-4 gap-1 uppercase flex flex-col;
                     span {
                       @apply text-xs leading-[14px] text-blue-100;
                     }

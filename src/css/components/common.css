@@ -1,3 +1,9 @@
+body {
+  &.active-modal {
+    @apply overflow-hidden;
+  }
+}
+
 .content {
   @apply mx-auto max-w-[1200px] px-6;
 }
@@ -7,9 +13,9 @@
 }
 
 .bttn-join {
-  @apply mt-4 w-max rounded-xl bg-orange-500 text-xs font-semibold;
+  @apply mt-4 w-max rounded-xl bg-orange-500 font-semibold;
   button {
-    @apply p-4;
+    @apply p-6;
   }
 }
 
@@ -17,8 +23,18 @@
   @apply scale-[1.5] border-none bg-none px-2 py-1 font-semibold leading-none outline-none;
 }
 
-.text-programs {
-  @apply mb-2 max-w-[642px] text-sm;
+.cont-third {
+  h2 {
+    @apply mb-2 tracking-[0.83px] max-w-[530px] text-xl;
+  }
+  .text-programs {
+    @apply mb-2 max-w-[530px] text-sm;
+  }
+  picture {
+    img {
+      @apply w-full;
+    }
+  }
 }
 
 .more-details {
@@ -31,7 +47,7 @@
 .btn-container {
   @apply mb-[48px];
   .btn {
-    @apply text-2xl uppercase;
+    @apply text-2xl uppercase py-1 px-2 rounded-lg font-semibold leading-none;
   }
 }
 
@@ -64,7 +80,7 @@
 
 @media (min-width: 768px) {
   .text-programs {
-    @apply mb-4 max-w-[480px];
+    @apply mb-4;
   }
   .more-details {
     a {
@@ -78,7 +94,7 @@
     @apply scale-[2] px-2;
   }
   .bttn-join {
-    @apply static mt-0 text-base;
+    @apply static mt-0;
   }
   .btn-container {
     @apply mb-0;
@@ -94,17 +110,24 @@
       }
     }
   }
-  
+  .cont-third {
+    @apply flex items-center;
+    h2 {
+      @apply mb-6 text-[37px] leading-[50px];
+    }
+  }
 }
 
 @media (min-width: 1025px) {
   .bttn-join {
     @apply text-lg tracking-[1px];
-    button {
-      @apply p-6;
-    }
   }
   .text-programs {
     @apply mb-7;
+  }
+  .cont-third {
+    h2 {
+      @apply mb-9;
+    }
   }
 }
