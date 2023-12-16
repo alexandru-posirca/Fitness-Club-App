@@ -1,6 +1,5 @@
 @import "tailwindcss/base";
 
-/* Custom components styles */
 @import "tailwindcss/components";
 @import "./components/common.css";
 @import "./components/card-workout.css";
@@ -11,6 +10,13 @@
 @import "./components/my-account.css";
 
 @import "tailwindcss/utilities";
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../dist/assets/fonts/InterVariable.woff2') format("woff2");
+  }
+}
 
 @layer components {
   h1 {
