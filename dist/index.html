@@ -21,28 +21,25 @@
     <header class="content md:fixed md:inset-x-0 md:top-0 md:z-10 md:w-full md:bg-black-main md:py-3">
       <div class="mt-[20px] items-center justify-between uppercase md:mt-0 md:flex">
         <div class="mb-6 text-[11.5vw] md:mb-0 md:text-base">
-          <a href="#">
-            <h1>Fitness club</h1>
-          </a>
+          <img src="./img/favicon.png" alt="logo-website" width="32" height="32">
         </div>
         <div class="nav-list">
           <nav>
-            <ul class="mb-12 text-2xl md:mb-0 md:flex md:text-xs">
+            <ul class="mb-12 text-2xl md:mb-0 md:flex md:text-sm">
               <li><a href="#workouts">Workout</a></li>
               <li><a href="#programs">Programs</a></li>
               <li><a href="#healthy">Healthy Living</a></li>
               <li><a href="#comunity">Comunity</a></li>
               <li><a href="#about">About</a></li>
-              <li><button data-modal-account="#modal-join-account" data-info="false" class="uppercase font-bold text-gray-light-100" id="data-account">My Account</button></li>
+              <li><button data-modal-account="#modal-join-account" data-info="false" class="uppercase font-semibold text-gray-light-100" id="data-account">My Account</button></li>
             </ul>
           </nav>
         </div>
         <div class="hidden btn-container" id="login">
-          <button class="btn" data-modal-target="#modal-join-club">Sign in</button>
-          <!-- <button class="btn" id="login-btn" data-modal-target="#modal-join-club">Sign in</button> -->
+          <button class="btn bg-green-200" data-modal-target="#modal-join-club">Log in</button>
         </div>
         <div class="hidden btn-container" id="logout">
-          <button class="btn" id="logout-btn">Sign out</button>
+          <button class="btn bg-brown" id="logout-btn">Log out</button>
         </div>
       </div>
     </header>
@@ -99,14 +96,15 @@
             </tbody>
           </table>
       <hr class="text-gray-light-200 my-4">
-        <div class="text-black-main flex flex-col items-end" id="reset-content">
-          <p class="text-sm text-blue-400 w-[321px] md:w-[365px]">You can refill your subscription plan until you receive a payment email.</p>
-          <div class="text-white-main w-max rounded-xl bg-orange-400 text-xs font-semibold md:static md:text-base lg:text-lg lg:tracking-[1px]">
-            <button class="p-4" id="reset-join" data-modal-target="#modal-join-club">Reset plan</button>
+        <div class="text-black-main flex flex-col" id="reset-content">
+          <p class="text-sm text-blue-400">You can <strong>refill</strong> or <strong>cancel</strong> your subscription plan.</p>
+          <div class="text-white-main w-full rounded-xl text-xs font-semibold md:static md:text-base lg:text-lg lg:tracking-[1px] flex justify-around mt-4">
+            <button class="btn bg-brown py-2 px-3 rounded-md" id="bttn-cancel">Cancel Plan</button>
+            <button class="btn bg-green-200 py-2 px-3 rounded-md" id="reset-join" data-modal-target="#modal-join-club">Reset plan</button>
           </div>
         </div>
       </div>
-      <div id="must-join" class="flex flex-col items-center gap-6">
+      <div id="must-join" class="flex flex-col items-center gap-4 md:gap-6">
         <p class="text-blue-400 w-[321px]">You must join the fitness club to see info about your personal account.</p>
         <div class="bttn-join">
           <button data-modal-target="#modal-join-club">Join Club NOW</button>
@@ -122,7 +120,7 @@
     <div class="form content-modal w-[375px] text-black-main md:w-[700px] lg:w-[958px] xl:w-auto xl:max-w-[100%]"
     id="form">
       <div class="form-container md:flex md:h-[600px] md:rounded-[15px] md:bg-white-main md:p-4">
-        <div class="form-sidebar relative flex h-[172px] items-start justify-center gap-4 bg-[url('./img/sidebar.png')] bg-cover bg-no-repeat px-12 py-8 md:h-auto md:flex-col md:justify-start md:gap-8 md:rounded-[10px] md:bg-[url('./img/sidebar-desktop.png')] md:pl-8 md:pr-[89px] md:pt-[50px]">
+        <div class="form-sidebar relative flex h-[172px] items-start justify-center gap-4 bg-[url('./img/sidebar.webp')] bg-cover bg-no-repeat px-12 py-8 md:h-auto md:flex-col md:justify-start md:gap-8 md:rounded-[10px] md:bg-[url('./img/sidebar-desktop.webp')] md:pl-8 md:pr-[89px] md:pt-[50px]">
           <div class="step active">
             <div class="circle">1</div>
             <div class="step-content">
@@ -188,7 +186,7 @@
                   Phone number<span>*</span>
                 </label>
                 <span class="error-input hidden" id="phone-error">
-                  The number must comply with RO standards.
+                  The number must comply with RO standards.png
                 </span>
               </div>
               <input type="phone" id="phone" required placeholder="Your phone">
@@ -213,7 +211,7 @@
               <form>
                 <div class="plan-card card-one" id="plan-selected">
                   <div class="icon-plan bg-purple-200">
-                    <img src="./img/basic.png" alt="basic-lv">
+                    <img src="./img/basic.png" alt="basic-lv" width="32" height="32">
                   </div>
                   <div class="plan-info chosen">
                     <b>Basic</b>
@@ -225,7 +223,7 @@
                 </div>
                 <div class="plan-card card-two">
                   <div class="icon-plan bg-orange-100">
-                    <img src="./img/advanced.png" alt="advanced-lv">
+                    <img src="./img/advanced.png" alt="advanced-lv" width="32" height="32">
                   </div>
                   <div class="plan-info chosen">
                     <b id="advanced-plan">Advanced</b>
@@ -237,7 +235,7 @@
                 </div>
                 <div class="plan-card card-three">
                   <div class="icon-plan bg-pink">
-                    <img src="./img/pro.png" alt="pro-lv">
+                    <img src="./img/pro.png" alt="pro-lv" width="32" height="32">
                   </div>
                   <div class="plan-info chosen">
                     <b>Pro</b>
@@ -354,13 +352,15 @@
           <img
           class="mb-6 md:mb-8 md:w-[80px]"
           src="./img/check.png"
-          alt="thanks">
+          alt="thanks"
+          width="80"
+          height="80"
+          >
           <div class="header mb-[25px] flex flex-col items-center">
             <h1 class="title">Thank you!</h1>
             <p class="exp exp-thank text-center !mb-0">
               Thank you for choosing the subscription! <br class="md:my-1">
-                You can access your info in  <b>My Account.</b><br class="md:my-1">
-                Payment details will be sent to the email.
+              You can access your info in  <strong class="text-lg">My Account.</strong><br class="md:my-1">
             </p>
           </div>
         </div>
@@ -381,7 +381,10 @@
         <img
         class="mt-[-20px] w-[60px] rounded-full shadow shadow-gray-light-300"
         src="./img/tick-login.png"
-        alt="tick-login">
+        alt="tick-login"
+        width="60"
+        height="60"
+        >
         <p class="logged logged-in mb-3 mt-2 text-xs md:text-base" id="logged-in">
           Successfully <b class="uppercase text-gray-light-300">logged in</b> and have access to the content.
         </p>
@@ -389,7 +392,7 @@
           Successfully <b class="uppercase text-gray-light-300">logged out</b> and the content is now restricted.
         </p>
         <button
-        class="w-full cursor-pointer uppercase rounded-lg border-none bg-green py-[10px] text-lg font-semibold shadow shadow-gray-light-300 outline-none"
+        class="w-full cursor-pointer uppercase rounded-lg border-none bg-green-100 py-[10px] text-lg font-semibold shadow shadow-gray-light-300 outline-none"
         id="close-popup"
         type="button">
           Ok
@@ -406,8 +409,8 @@
             <span class="block tracking-[-2px] text-white-main">with me</span>
           </h1>
         </div>
-          <div class="mt-6 flex md:mt-0 justify-between items-start md:items-end relative md:bottom-[18vw] xl:bottom-[260px] flex-col md:flex-row md:overflow-hidden">
-            <div class="md:h-max w-full md:w-[15%] lg:w-[33%]">
+          <div class="mt-6 flex md:mt-0 justify-between items-center md:items-end relative md:bottom-[18vw] xl:bottom-[260px] flex-col md:flex-row">
+            <div class="md:max-w-[290px]">
               <p class="md:my-9 lg:my-12">
                 A huge selection of health and fitness content, healthy recipes
                 and transformation stories to help you get fit and stay fit!
@@ -415,14 +418,14 @@
               <div class="bttn-join">
                 <button data-modal-target="#modal-join-club">Join Club NOW</button>
               </div>
-              <div class="modal-join-club join-auth fixed left-1/2 top-1/2 z-30 rounded-xl bg-gray-light-400 p-3 pr-1 pt-2 transition delay-150 ease-in-out md:p-5 md:pr-4" id="modal-join-club">
+              <div class="modal-join-club join-auth fixed left-1/2 top-1/2 z-30 rounded-xl bg-gray-light-400 p-3 transition delay-150 ease-in-out md:p-5 md:pr-4 min-w-[271px]" id="modal-join-club">
                 <div class="modal-header flex justify-end pr-1">
                   <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body flex flex-col items-center">
-                  <div class="my-4 rounded-lg bg-white-main" id="login-modal">
+                  <div class="my-5 rounded-lg bg-white-main" id="login-modal">
                     <button class="btn flex items-center p-3 text-sm text-black-main md:text-lg" id="login-modal-btn">
-                      <img class="mr-3 md:w-10" alt="google-auth" src="./img/google.png"/>
+                      <img class="mr-3 md:w-10" alt="google-auth" src="./img/google.png" width="32" height="32"/>
                       Login with Google
                     </button>
                   </div>
@@ -435,36 +438,41 @@
               </div>
               <div data-close-button class="cursor-pointer overlay-join" id="overlay"></div>
               </div>
-              <div class="info-workout flex items-end w-full justify-center md:justify-end relative md:left-10 mt-5 md:mt-0 h-[361px] md:h-auto">
-                  <div class="h-max w-max items-center justify-between rounded-xl bg-gray-dark-200 p-2 md:relative md:px-[18px] md:py-[15px] lg:px-6 lg:py-4 flex flex-row gap-2 md:gap-0 md:left-8">
+              <div class="h-full w-full relative flex justify-center mt-6 md:mt-0">
+                <picture class="ml-[5%] md:ml-[31%]">
+                  <source media="(min-width: 768px)" srcset="./img/athlete-large.webp"/>
+                  <source type="image/webp" srcset="./img/athlete-small.webp"/>
+                  <img class="h-full md:h-auto md:min-w-full md:w-[320px]" src="./img/athlete.png" width="200" height="334" alt="athlete"/>
+                </picture>
+              <div class="info-workout absolute flex items-end top-0 w-full md:w-auto justify-between max-w-[400px] md:max-w-full md:justify-end md:gap-[204px] h-full md:left-10 md:mt-0 md:right-0">
+                  <div class="h-max w-max items-center justify-between rounded-xl bg-gray-dark-200 p-2 md:relative md:px-[18px] md:py-[15px] lg:px-6 lg:py-4 flex flex-row gap-2">
                     <div class="flex h-7 w-7 items-center justify-center rounded-full bg-orange-400 md:h-10 md:w-10">
                       <a href="#" class="ml-1 h-4 w-4 md:h-5 md:w-5 rotate-90 bg-white-main" id="triangle"> </a>
                     </div>
                     <div class="md:ml-3 flex flex-col items-center md:block">
-                      <p class="mb-1 text-sm font-semibold leading-none text-white-main md:text-xl md:leading-6 lg:text-2xl lg:leading-6">350+</p>
+                      <p class="mb-1 font-semibold leading-4 text-white-main md:text-xl md:leading-6 lg:text-2xl lg:leading-6">350+</p>
                       <p class="text-xs md:text-[13px] w-max">Tutorials</p>
                     </div>
                   </div>
-                  <div class="h-full md:h-auto relative right-4">
-                    <img class="h-full min-w-[110%] md:h-auto md:min-w-full" src="./img/athlete.png" alt="athlete" />
-                  </div>
-                  <div class="h-[361px] flex flex-wrap justify-between flex-col md:h-[535px] relative md:right-10">
-                    <div class="h-max rounded-xl bg-orange-300 p-2 md:mt-0 md:px-4 md:py-2 lg:px-[22px] lg:py-2 md:flex md:justify-between lg:block items-center">
+
+                  <div class="h-full flex flex-wrap justify-between flex-col relative">
+                    <div class="h-max rounded-xl bg-orange-300 p-2 md:mt-0 md:px-[22px] md:py-2">
                       <div class="h-7 w-7 rounded-full bg-orange-100 p-1 xl:mb-2">
-                        <img src="./img/runner.png" alt="runner" />
+                        <img src="./img/runner.png" alt="runner" width="24" height="24"/>
                       </div>
-                      <p class="text-sm font-bold leading-6 tracking-[-1px] text-white-main md:text-xl  md:leading-normal md:tracking-[-2px] lg:text-5xl">
+                      <p class="font-bold leading-6 tracking-[-1px] text-white-main md:text-2xl lg:text-4xl md:tracking-[-2px]">
                         4,95
-                        <span class="ml-1 text-xs md:ml-2 md:text-base lg:ml-3">km</span>
+                        <span class="ml-1 text-xs md:text-base">km</span>
                       </p>
                     </div>
                   <div class="flex h-max flex-col items-center rounded-xl bg-purple-100 p-2 md:items-start md:px-3 md:py-3 lg:px-6 lg:py-4">
-                    <p class="text-sm font-semibold leading-none text-white-main md:text-xl lg:text-2xl lg:tracking-[1px] lg:leading-6 mb-1">500+</p>
+                    <p class="font-semibold leading-4 text-white-main md:text-xl lg:text-2xl lg:tracking-[1px] lg:leading-6 mb-1">500+</p>
                     <a class="gap-[3px] text-xs tracking-[1px] text-gray-dark-100 md:flex md:text-[13px]" href="#">
                       <span class="hidden md:block">Free</span>Workout <span class="hidden md:block">Videos</span>
                     </a>
                   </div>
                   </div>
+                </div>
             </div>
           </div>
       </section>
@@ -482,7 +490,7 @@
                 <p>Access to hundreds of free, full-length workout videos.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -491,7 +499,7 @@
                 <p>Affordable and effective workout programs.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -500,7 +508,7 @@
                 <p>Plans built with registered dietitians and nutritionists.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -509,7 +517,7 @@
                 <p>Add powerful features to your membership.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
             </div>
         </div>
@@ -519,10 +527,10 @@
 
         <!-- Third section -->
 
-      <section class="mt-12 md:mt-[62px] md:pt-[110px]" id="healthy">
-        <div class="mb-10 md:mb-[50px] md:flex md:items-center md:justify-end lg:mb-[121px]">
+      <section class="third-section mt-12 md:mt-[62px] md:pt-[110px]" id="healthy">
+        <div class="cont-third mb-10 md:mb-[50px] md:justify-end lg:mb-[121px]">
           <div class="md:mr-[65px]">
-            <h2 class="mb-2 text-[25px] leading-[50px] md:mb-4 md:text-[40px] md:tracking-[0.9px] lg:mb-8">Work out at home for free.</h2>
+            <h2>Work out at home for free.</h2>
             <p class="text-programs"> We believe fitness should be accessible to everyone, everywhere,
               regardless of income or access to a gym. With hundreds of
               professional workouts, healthy recipes and informative articles,
@@ -531,17 +539,17 @@
               for free!</p>
               <div class="more-details">
                 <a href="#">See More</a>
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
           </div>
-          <img
-          class="md:w-[49%] xl:w-auto"
-          src="./img/girl-yoga.png"
-          alt="girl-yoga">
+            <picture>
+              <source type="image/webp" srcset="./img/girl-yoga.webp"/>
+              <img src="./img/girl-yoga.jpg" width="280" height="236" alt="girl-yoga"/>
+          </picture>
         </div>
-        <div class="md:flex md:flex-row-reverse md:items-center">
-          <div class="md:ml-[89px]">
-            <h2 class="mb-2 text-[25px] tracking-[0.83px] md:mb-4 md:text-2xl lg:mb-[38px] lg:text-[50px] lg:leading-[55px] xl:leading-[70px]">
+        <div class="cont-third md:flex-row-reverse">
+          <div class="md:ml-[65px]">
+            <h2>
               Get more with low-cost training programs and advanced features.
             </h2>
             <p class="text-programs">
@@ -554,12 +562,13 @@
             </p>
             <div class="more-details">
               <a href="#">See More</a>
-              <img src="./img/arrow-right.png" alt="arrow-right">
+              <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
             </div>
           </div>
-          <img
-          class="md:w-[50%]"
-          src="./img/girl-workout.png" alt="girl-workout">
+          <picture>
+            <source type="image/webp" srcset="./img/girl-workout.webp"/>
+            <img src="./img/girl-workout.jpg" width="280" height="255" alt="girl-workout"/>
+        </picture>
         </div>
       </section>
 
@@ -592,7 +601,7 @@
               </div>
               <div class="more-details mt-3 md:mb-0 md:mt-[100px]">
                 <a href="#">See More</a>
-                <img src="./img/arrow-right.png" alt="arrow-right">
+                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-membership bg-gray-light-400 pb-5 md:pb-[34px]">
@@ -623,7 +632,7 @@
                 <img
                 class="ml-1 w-5 md:ml-2 md:w-auto"
                 src="./img/arrow-top.png"
-                alt="arrow-top">
+                alt="arrow-top" width="24" height="24">
               </a>
             </div>
           </div>
@@ -650,13 +659,13 @@
                 </div>
                 <div class="flex justify-center gap-[14px] md:justify-around">
                   <a href="#">
-                    <img class="w-[80%]" src="./img/linkedin.png" alt="linkedin" />
+                    <img class="w-[80%]" src="./img/linkedin.png" alt="linkedin" width="50" height="50"/>
                   </a>
                   <a href="#">
-                    <img class="w-[80%]" src="./img/twitter.png" alt="twitter" />
+                    <img class="w-[80%]" src="./img/twitter.png" alt="twitter" width="50" height="50"/>
                   </a>
                   <a href="#">
-                    <img class="w-[80%]" src="./img/instagram.png" alt="instagram" />
+                    <img class="w-[80%]" src="./img/instagram.png" alt="instagram" width="50" height="50"/>
                   </a>
                 </div>
               </div>
@@ -666,7 +675,7 @@
               <img
               class="mx-2 w-[8px]"
               src="./img/privacy-bullet.png"
-              alt="privacy-bullet"/>
+              alt="privacy-bullet" width="24" height="24"/>
               <a href="#">Privacy Policy</a>
             </div>
             <hr class="my-1 opacity-[0.5]"/>
