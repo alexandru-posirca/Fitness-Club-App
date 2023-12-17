@@ -4,7 +4,7 @@ import {
     GoogleAuthProvider,
   } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
   import { auth } from "./main.js";
-  
+
   const logInSection = document.querySelectorAll("#login, #login-modal");
   const modalJoinClub = document.getElementById("modal-join-club");
   const logInWithGoogleButton = document.querySelectorAll(
@@ -17,7 +17,7 @@ import {
   const loggedOut = document.getElementById("logged-out");
   const dataAccount = document.getElementById("data-account");
   const myAccount = document.getElementById("my-account");
-  
+
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
@@ -33,11 +33,11 @@ import {
         return errorMessage ? alert("Popup closed") : alert("Popup on");
       });
   };
-  
+
   logInWithGoogleButton.forEach((element) => {
     element.addEventListener("click", signInWithGoogle);
   });
-  
+
   onAuthStateChanged(auth, (user) => {
     if (user != null) {
       console.log("User logat", user);
@@ -52,8 +52,7 @@ import {
       loggedOut.style.display = "none";
     } else {
       logInSection.forEach((element) => {
-        element.style.display = "flex";
+        element.style.display = "block";
       });
     }
   });
-  

@@ -65,7 +65,7 @@
               @apply mb-4 flex cursor-pointer items-center rounded-lg border-[1px] border-solid border-gray-dark-100 p-[14px];
               .icon-plan {
                 @apply mr-[14px] h-max rounded-full;
-                img {
+                svg {
                   @apply p-1;
                 }
               }
@@ -92,7 +92,7 @@
               }
             }
             .box {
-              @apply mb-3 flex items-center rounded-lg border-[1px] border-solid border-gray-dark-100 px-4 pb-[10px] pt-3;
+              @apply mb-3 flex items-center border-[1px] border-solid border-gray-dark-100 px-4 pb-[10px] pt-3;
               input {
                 @apply pointer-events-none mb-0 h-5 w-5 select-none accent-purple-200;
               }

@@ -1089,7 +1089,7 @@ body.active-modal {
           margin-bottom: 0px;
         }
         .nav-list nav ul li {
-          margin-left: 0.75rem;
+          margin-left: 1.25rem;
         }
         .nav-list nav ul li {
           width: auto;
@@ -1467,7 +1467,7 @@ body.active-modal {
               border-radius: 9999px;
             }
 
-.form .form-container .stp .content-step form .plan-card .icon-plan img {
+.form .form-container .stp .content-step form .plan-card .icon-plan svg {
                 padding: 0.25rem;
               }
 
@@ -1550,10 +1550,6 @@ body.active-modal {
 
 .form .form-container .stp .content-step form .box {
             align-items: center;
-          }
-
-.form .form-container .stp .content-step form .box {
-            border-radius: 0.5rem;
           }
 
 .form .form-container .stp .content-step form .box {
@@ -2482,7 +2478,7 @@ body.active-modal {
 
 @media (min-width: 768px) {
     #popup.open-popup {
-      top: 136px;
+      top: 146px;
     }
     #popup.open-popup {
       display: flex;
@@ -2633,21 +2629,12 @@ body.active-modal {
   top: 50%;
 }
 
-.top-6 {
-  top: 1.5rem;
-}
-
 .top-\[10px\] {
   top: 10px;
 }
 
 .z-30 {
   z-index: 30;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .mx-6 {
@@ -2774,12 +2761,8 @@ body.active-modal {
   margin-top: -76px;
 }
 
-.mt-\[110px\] {
-  margin-top: 110px;
-}
-
-.mt-\[20px\] {
-  margin-top: 20px;
+.mt-\[146px\] {
+  margin-top: 146px;
 }
 
 .block {
@@ -2847,10 +2830,6 @@ body.active-modal {
   width: 1rem;
 }
 
-.w-5 {
-  width: 1.25rem;
-}
-
 .w-7 {
   width: 1.75rem;
 }
@@ -2871,16 +2850,8 @@ body.active-modal {
   width: 60px;
 }
 
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .w-\[89\%\] {
   width: 89%;
-}
-
-.w-\[8px\] {
-  width: 8px;
 }
 
 .w-auto {
@@ -2908,6 +2879,10 @@ body.active-modal {
   max-width: 400px;
 }
 
+.max-w-\[478px\] {
+  max-width: 478px;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -2923,11 +2898,6 @@ body.active-modal {
 
 .translate-y-\[-50\%\] {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-180 {
-  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3200,8 +3170,8 @@ body.active-modal {
   padding-bottom: 10px;
 }
 
-.\!pt-5 {
-  padding-top: 1.25rem !important;
+.\!pt-\[70px\] {
+  padding-top: 70px !important;
 }
 
 .pb-10 {
@@ -3226,22 +3196,6 @@ body.active-modal {
 
 .pt-0 {
   padding-top: 0px;
-}
-
-.\!pt-8 {
-  padding-top: 2rem !important;
-}
-
-.\!pt-12 {
-  padding-top: 3rem !important;
-}
-
-.\!pt-\[50px\] {
-  padding-top: 50px !important;
-}
-
-.\!pt-\[70px\] {
-  padding-top: 70px !important;
 }
 
 .text-center {
@@ -3379,24 +3333,20 @@ body.active-modal {
   opacity: 0;
 }
 
-.opacity-\[0\.2\] {
-  opacity: 0.2;
-}
-
-.opacity-\[0\.5\] {
-  opacity: 0.5;
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .opacity-80 {
   opacity: 0.8;
 }
 
-.opacity-70 {
-  opacity: 0.7;
+.opacity-\[0\.2\] {
+  opacity: 0.2;
 }
 
-.opacity-60 {
-  opacity: 0.6;
+.opacity-\[0\.5\] {
+  opacity: 0.5;
 }
 
 .shadow {
@@ -3505,12 +3455,12 @@ body.active-modal {
     margin-bottom: 3rem;
   }
 
-  .md\:mb-6 {
-    margin-bottom: 1.5rem;
+  .md\:mb-3 {
+    margin-bottom: 0.75rem;
   }
 
-  .md\:mb-8 {
-    margin-bottom: 2rem;
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:mb-\[147px\] {
@@ -3519,10 +3469,6 @@ body.active-modal {
 
   .md\:mb-\[50px\] {
     margin-bottom: 50px;
-  }
-
-  .md\:ml-2 {
-    margin-left: 0.5rem;
   }
 
   .md\:ml-3 {
@@ -3617,10 +3563,6 @@ body.active-modal {
     width: 700px;
   }
 
-  .md\:w-\[80px\] {
-    width: 80px;
-  }
-
   .md\:w-auto {
     width: auto;
   }
@@ -3631,6 +3573,11 @@ body.active-modal {
 
   .md\:min-w-full {
     min-width: 100%;
+  }
+
+  .md\:min-w-max {
+    min-width: -moz-max-content;
+    min-width: max-content;
   }
 
   .md\:max-w-\[290px\] {

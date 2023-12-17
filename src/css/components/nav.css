@@ -21,7 +21,7 @@
     nav {
       ul {
         li {
-          @apply mb-0 ml-3 w-auto py-0;
+          @apply mb-0 ml-5 w-auto py-0;
           &:first-child {
             @apply ml-0;
           }

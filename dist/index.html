@@ -18,12 +18,11 @@
   <body class="min-h-[100vh] bg-black-main font-inter text-white-main">
 
     <!-- Header Section -->
-
     <header class="content md:fixed md:inset-x-0 md:top-0 md:z-10 md:w-full md:bg-black-main md:py-3">
-      <div class="mt-[20px] items-center justify-between uppercase md:mt-0 md:flex md:items-center">
-        <div class="mb-6 text-[11.5vw] md:mb-0 md:text-base flex">
+      <div class="mt-3 items-center justify-between uppercase md:mt-0 mb-6 md:mb-0 md:flex md:items-center">
+        <div class="text-[11.5vw] md:mb-0 md:text-base flex items-center">
           <div>
-            <img src="./img/favicon.png" alt="logo-website" width="32" height="32">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 48 48"><path fill="none" stroke="#ffa200" stroke-linejoin="round" stroke-width="2" d="M14 13.6c0-1.436-1.343-2.6-3-2.6s-3 1.164-3 2.6v20.8c0 1.436 1.343 2.6 3 2.6s3-1.164 3-2.6zm26 0c0-1.436-1.343-2.6-3-2.6s-3 1.164-3 2.6v20.8c0 1.436 1.343 2.6 3 2.6s3-1.164 3-2.6zM8 18.667C8 17.194 6.657 16 5 16s-3 1.194-3 2.667v10.666C2 30.806 3.343 32 5 32s3-1.194 3-2.667zm38 0C46 17.194 44.657 16 43 16s-3 1.194-3 2.667v10.666C40 30.806 41.343 32 43 32s3-1.194 3-2.667zM14 27h20v-6H14z"></path></svg>
           </div>
           <div class="nav-toggle absolute right-6 md:hidden cursor-pointer" id="navToggle">
             <svg class="nav-icon opacity-80" id="hamburger" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50" fill="white">
@@ -39,8 +38,8 @@
             <ul class="mb-12 text-2xl md:mb-0 md:flex md:text-sm md:items-center">
               <li><a href="#workouts">Workout</a></li>
               <li><a href="#programs">Programs</a></li>
-              <li><a href="#healthy">Healthy Living</a></li>
-              <li><a href="#comunity">Comunity</a></li>
+              <li><a href="#healthy">Healthy</a></li>
+              <li><a href="#community">Community</a></li>
               <li><a href="#about">About</a></li>
               <li><button data-modal-account="#modal-join-account" data-info="false" class="uppercase font-semibold text-gray-light-100" id="data-account">My Account</button></li>
               <li>
@@ -109,7 +108,7 @@
           </table>
       <hr class="text-gray-light-200 my-4">
         <div class="text-black-main flex flex-col" id="reset-content">
-          <p class="text-sm text-blue-400">You can <strong>refill</strong> or <strong>cancel</strong> your subscription plan.</p>
+          <p class="text-sm text-blue-400">You can <strong>cancel</strong> or <strong>reset</strong> your subscription plan.</p>
           <div class="text-white-main w-full rounded-xl text-xs font-semibold md:static md:text-base lg:text-lg lg:tracking-[1px] flex justify-around mt-4">
             <button class="btn bg-brown py-2 px-3 rounded-md" id="bttn-cancel">Cancel Plan</button>
             <button class="btn bg-green-200 py-2 px-3 rounded-md" id="reset-join" data-modal-target="#modal-join-club">Reset plan</button>
@@ -223,7 +222,7 @@
               <form>
                 <div class="plan-card card-one" id="plan-selected">
                   <div class="icon-plan bg-purple-200">
-                    <img src="./img/basic.png" alt="basic-lv" width="32" height="32">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><circle cx="256" cy="56" r="56" fill="white"/><path fill="white" d="M304 128h-96a64.19 64.19 0 0 0-64 64v107.52c0 10.85 8.43 20.08 19.27 20.47A20 20 0 0 0 184 300v-99.73a8.18 8.18 0 0 1 7.47-8.25a8 8 0 0 1 8.53 8V489a23 23 0 0 0 23 23a23 23 0 0 0 23-23V346.34a10.24 10.24 0 0 1 9.33-10.34A10 10 0 0 1 266 346v143a23 23 0 0 0 23 23a23 23 0 0 0 23-23V200.27a8.18 8.18 0 0 1 7.47-8.25a8 8 0 0 1 8.53 8v99.52c0 10.85 8.43 20.08 19.27 20.47A20 20 0 0 0 368 300V192a64.19 64.19 0 0 0-64-64"/></svg>
                   </div>
                   <div class="plan-info chosen">
                     <b>Basic</b>
@@ -235,7 +234,7 @@
                 </div>
                 <div class="plan-card card-two">
                   <div class="icon-plan bg-orange-100">
-                    <img src="./img/advanced.png" alt="advanced-lv" width="32" height="32">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M4 6c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2M1 9h6l7-5l1.31 1.52l-4.17 2.98H14L21.8 4L23 5.4L14.5 12L14 22h-2l-.5-10L8 11H1z"/></svg>
                   </div>
                   <div class="plan-info chosen">
                     <b id="advanced-plan">Advanced</b>
@@ -247,7 +246,7 @@
                 </div>
                 <div class="plan-card card-three">
                   <div class="icon-plan bg-pink">
-                    <img src="./img/pro.png" alt="pro-lv" width="32" height="32">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="m10 22l-.5-9l-3.175-1.825l-.35 1.3L8 16l-1.725 1L3.8 12.75L5 8.45l5.75-3.3L8 2.4L9.4 1L14 5.575L10.4 7.65l1.2 1.05L19.8 2L21 3.4L12.5 12L12 22zM5 7q-.825 0-1.412-.587T3 5q0-.825.588-1.412T5 3q.825 0 1.413.588T7 5q0 .825-.587 1.413T5 7"/></svg>
                   </div>
                   <div class="plan-info chosen">
                     <b>Pro</b>
@@ -361,13 +360,11 @@
        <!-- step-5 -->
       <div class="stp step-5 !justify-center">
         <div class="content-step mb-[67px] flex flex-col items-center">
-          <img
-          class="mb-6 md:mb-8 md:w-[80px]"
-          src="./img/check.png"
-          alt="thanks"
-          width="80"
-          height="80"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8" fill="#ffffff" />
+            <path fill="#f9818e" d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z"></path>
+          </svg>
+
           <div class="header mb-[25px] flex flex-col items-center">
             <h1 class="title">Thank you!</h1>
             <p class="exp exp-thank text-center !mb-0">
@@ -389,14 +386,12 @@
 
        <!-- Start POP-UP section -->
 
-      <div class="fixed left-[50%] mt-[110px] md:mt-0 top-0 z-30 hidden w-[89%] translate-x-[-50%] translate-y-[-50%] scale-[0.1] flex-col items-center rounded-xl bg-gray-light-200 px-4 pb-4 text-center transition-transform md:w-auto" id="popup">
-        <img
-        class="mt-[-20px] w-[60px] rounded-full shadow shadow-gray-light-300"
-        src="./img/tick-login.png"
-        alt="tick-login"
-        width="60"
-        height="60"
-        >
+      <div class="fixed left-[50%] mt-[146px] max-w-[478px] md:max-w-full md:min-w-max md:mt-0 top-0 z-30 hidden w-[89%] translate-x-[-50%] translate-y-[-50%] scale-[0.1] flex-col items-center rounded-xl bg-gray-light-200 px-4 pb-4 text-center transition-transform md:w-auto" id="popup">
+        <svg class="mt-[-20px] w-[60px] rounded-full shadow shadow-gray-light-300" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 15 15">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="#6fd649" />
+          <circle cx="7.5" cy="7.5" r="5" fill="#ffffff" />
+          <path fill="#6fd649" fill-rule="evenodd" d="M0 7.5a7.5 7.5 0 1 1 15 0a7.5 7.5 0 0 1-15 0m7.072 3.21l4.318-5.398l-.78-.624l-3.682 4.601L4.32 7.116l-.64.768z" clip-rule="evenodd"></path>
+        </svg>
         <p class="logged logged-in mb-3 mt-2 text-xs md:text-base" id="logged-in">
           Successfully <b class="uppercase text-gray-light-300">logged in</b> and have access to the content.
         </p>
@@ -437,7 +432,7 @@
                 <div class="modal-body flex flex-col items-center">
                   <div class="my-5 rounded-lg bg-white-main" id="login-modal">
                     <button class="btn flex items-center p-3 text-sm text-black-main md:text-lg" id="login-modal-btn">
-                      <img class="mr-3 md:w-10" alt="google-auth" src="./img/google.png" width="32" height="32"/>
+                      <svg class="mr-3 md:w-10" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128"><path fill="#fff" d="M44.59 4.21a63.28 63.28 0 0 0 4.33 120.9a67.6 67.6 0 0 0 32.36.35a57.13 57.13 0 0 0 25.9-13.46a57.44 57.44 0 0 0 16-26.26a74.33 74.33 0 0 0 1.61-33.58H65.27v24.69h34.47a29.72 29.72 0 0 1-12.66 19.52a36.16 36.16 0 0 1-13.93 5.5a41.29 41.29 0 0 1-15.1 0A37.16 37.16 0 0 1 44 95.74a39.3 39.3 0 0 1-14.5-19.42a38.31 38.31 0 0 1 0-24.63a39.25 39.25 0 0 1 9.18-14.91A37.17 37.17 0 0 1 76.13 27a34.28 34.28 0 0 1 13.64 8q5.83-5.8 11.64-11.63c2-2.09 4.18-4.08 6.15-6.22A61.22 61.22 0 0 0 87.2 4.59a64 64 0 0 0-42.61-.38"></path><path fill="#e33629" d="M44.59 4.21a64 64 0 0 1 42.61.37a61.22 61.22 0 0 1 20.35 12.62c-2 2.14-4.11 4.14-6.15 6.22Q95.58 29.23 89.77 35a34.28 34.28 0 0 0-13.64-8a37.17 37.17 0 0 0-37.46 9.74a39.25 39.25 0 0 0-9.18 14.91L8.76 35.6A63.53 63.53 0 0 1 44.59 4.21"></path><path fill="#f8bd00" d="M3.26 51.5a62.93 62.93 0 0 1 5.5-15.9l20.73 16.09a38.31 38.31 0 0 0 0 24.63q-10.36 8-20.73 16.08a63.33 63.33 0 0 1-5.5-40.9"></path><path fill="#587dbd" d="M65.27 52.15h59.52a74.33 74.33 0 0 1-1.61 33.58a57.44 57.44 0 0 1-16 26.26c-6.69-5.22-13.41-10.4-20.1-15.62a29.72 29.72 0 0 0 12.66-19.54H65.27c-.01-8.22 0-16.45 0-24.68"></path><path fill="#319f43" d="M8.75 92.4q10.37-8 20.73-16.08A39.3 39.3 0 0 0 44 95.74a37.16 37.16 0 0 0 14.08 6.08a41.29 41.29 0 0 0 15.1 0a36.16 36.16 0 0 0 13.93-5.5c6.69 5.22 13.41 10.4 20.1 15.62a57.13 57.13 0 0 1-25.9 13.47a67.6 67.6 0 0 1-32.36-.35a63 63 0 0 1-23-11.59A63.73 63.73 0 0 1 8.75 92.4"></path></svg>
                       Login with Google
                     </button>
                   </div>
@@ -470,11 +465,12 @@
                   <div class="h-full flex flex-wrap justify-between flex-col relative">
                     <div class="h-max rounded-xl bg-orange-300 p-2 md:mt-0 md:px-[22px] md:py-2">
                       <div class="h-7 w-7 rounded-full bg-orange-100 p-1 xl:mb-2">
-                        <img src="./img/runner.png" alt="runner" width="24" height="24"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m-3.6 13.9l1-4.4l2.1 2v6h2v-7.5l-2.1-2l.6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1c-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7l-1.6 8.1l-4.9-1l-.4 2z"/></svg>
                       </div>
                       <p class="font-bold leading-6 tracking-[-1px] text-white-main md:text-2xl lg:text-4xl md:tracking-[-2px]">
                         4,95
                         <span class="ml-1 text-xs md:text-base">km</span>
+
                       </p>
                     </div>
                   <div class="flex h-max flex-col items-center rounded-xl bg-purple-100 p-2 md:items-start md:px-3 md:py-3 lg:px-6 lg:py-4">
@@ -502,7 +498,7 @@
                 <p>Access to hundreds of free, full-length workout videos.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -511,7 +507,7 @@
                 <p>Affordable and effective workout programs.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -520,7 +516,7 @@
                 <p>Plans built with registered dietitians and nutritionists.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-workout">
@@ -529,7 +525,7 @@
                 <p>Add powerful features to your membership.</p>
               </div>
               <div class="arrow-card">
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
             </div>
         </div>
@@ -551,7 +547,7 @@
               for free!</p>
               <div class="more-details">
                 <a href="#">See More</a>
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
           </div>
             <picture>
@@ -574,7 +570,7 @@
             </p>
             <div class="more-details">
               <a href="#">See More</a>
-              <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+              <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
             </div>
           </div>
           <picture>
@@ -589,7 +585,7 @@
          <!-- Fourth section -->
 
          <section class="fourth-section mb-[120px] mt-12 md:mb-[147px] md:mt-[50px] md:pt-[88px]"
-         id="comunity">
+         id="community">
           <h1 class="text-[25px] leading-[50px] md:text-[50px] md:leading-[70px]">Membership
           </h1>
           <hr class="mb-5 mt-1 opacity-[0.5] md:mb-12 md:mt-7"/>
@@ -613,7 +609,7 @@
               </div>
               <div class="more-details mt-3 md:mb-0 md:mt-[100px]">
                 <a href="#">See More</a>
-                <img src="./img/arrow-right.png" alt="arrow-right" width="24" height="24">
+                <img src="./img/arrow-right.svg" alt="arrow-right" width="24" height="24">
               </div>
             </div>
             <div class="card-membership bg-gray-light-400 pb-5 md:pb-[34px]">
@@ -641,10 +637,7 @@
             </div>
             <div class="absolute right-0 mt-3 w-max items-center bg-white-main p-1 text-sm font-semibold text-black-main md:bottom-[-118px] md:right-auto md:mt-0 md:px-2 md:py-[6px] md:text-[18px] md:leading-[22px] xl:right-0">
               <a class="flex w-max" href="#">Back to Top
-                <img
-                class="ml-1 w-5 md:ml-2 md:w-auto"
-                src="./img/arrow-top.png"
-                alt="arrow-top" width="24" height="24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="ml-1"><path fill="#000000" fill-rule="evenodd" d="m4 15l8-8l8 8l-2 2l-6-6l-6 6z"></path></svg>
               </a>
             </div>
           </div>
@@ -655,39 +648,37 @@
            <footer class="content pb-5 md:pt-[60px]" id="about">
             <div class="pb-10 md:flex md:justify-between">
               <div>
-                <div class="mb:mb-3 mb-2 flex justify-center md:justify-start">
+                <div class="mb-3 flex justify-center md:justify-start">
                   <h2>Navigate</h2>
                 </div>
                 <ul class="flex justify-center gap-[14px] tracking-normal md:flex-col md:justify-start">
                   <li><a href="#workouts">Workout</a></li>
                   <li><a href="#programs">Programs</a></li>
-                  <li><a href="#healthy">Healthy Living</a></li>
-                  <li><a href="#comunity">Comunity</a></li>
+                  <li><a href="#healthy">Healthy</a></li>
+                  <li><a href="#community">Community</a></li>
                 </ul>
               </div>
               <div class="mt-4 md:mt-0">
-                <div class="mb:mb-3 mb-2 flex justify-center md:justify-start">
+                <div class="mb-3 flex justify-center md:justify-start">
                   <h2>Social Media</h2>
                 </div>
                 <div class="flex justify-center gap-[14px] md:justify-around">
                   <a href="#">
-                    <img class="w-[80%]" src="./img/linkedin.png" alt="linkedin" width="50" height="50"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 14 14"><path fill="none" stroke="#808080" stroke-linecap="round" stroke-linejoin="round" d="M.5 12.5v-11a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3V8.76h.71a.61.61 0 0 0 .61-.61v-.77a.611.611 0 0 0-.61-.61h-.67v-.94c0-.84.38-.84.76-.84h.49a.55.55 0 0 0 .43-.18a.58.58 0 0 0 .18-.43v-.74a.618.618 0 0 0-.6-.64H9.65a2.32 2.32 0 0 0-2.39 2.6v1.17h-.64a.61.61 0 0 0-.62.61v.77a.61.61 0 0 0 .62.61h.64v4.74H1.5a1 1 0 0 1-1-1"></path></svg>
                   </a>
                   <a href="#">
-                    <img class="w-[80%]" src="./img/twitter.png" alt="twitter" width="50" height="50"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="#808080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5c0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01"></path></svg>
                   </a>
                   <a href="#">
-                    <img class="w-[80%]" src="./img/instagram.png" alt="instagram" width="50" height="50"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 15 15"><path fill="none" stroke="#808080" d="M11 3.5h1M4.5.5h6a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4Zm3 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Z">
+                    </path></svg>
                   </a>
                 </div>
               </div>
             </div>
             <div class="flex items-center justify-center text-sm text-gray-dark-100 md:text-base">
               <a href="#">Terms & Conditions</a>
-              <img
-              class="mx-2 w-[8px]"
-              src="./img/privacy-bullet.png"
-              alt="privacy-bullet" width="24" height="24"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1024 640q79 0 149 30t122 82t83 123t30 149q0 80-30 149t-82 122t-123 83t-149 30q-80 0-149-30t-122-82t-83-122t-30-150q0-79 30-149t82-122t122-83t150-30"></path></svg>
               <a href="#">Privacy Policy</a>
             </div>
             <hr class="my-1 opacity-[0.5]"/>
