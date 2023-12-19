@@ -2770,16 +2770,16 @@ body.active-modal {
   margin-top: -50px;
 }
 
+.mt-\[-76px\] {
+  margin-top: -76px;
+}
+
 .mt-\[110px\] {
   margin-top: 110px;
 }
 
 .mt-\[20px\] {
   margin-top: 20px;
-}
-
-.mt-\[-76px\] {
-  margin-top: -76px;
 }
 
 .block {
@@ -3228,6 +3228,22 @@ body.active-modal {
   padding-top: 0px;
 }
 
+.\!pt-8 {
+  padding-top: 2rem !important;
+}
+
+.\!pt-12 {
+  padding-top: 3rem !important;
+}
+
+.\!pt-\[50px\] {
+  padding-top: 50px !important;
+}
+
+.\!pt-\[70px\] {
+  padding-top: 70px !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -3369,6 +3385,18 @@ body.active-modal {
 
 .opacity-\[0\.5\] {
   opacity: 0.5;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .shadow {
