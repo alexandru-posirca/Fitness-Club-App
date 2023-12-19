@@ -47,7 +47,7 @@ body {
 .btn-container {
   @apply mb-[48px];
   .btn {
-    @apply text-2xl uppercase py-1 px-2 rounded-lg font-semibold leading-none;
+    @apply text-2xl uppercase py-1 px-2 rounded-lg font-semibold leading-none text-white-main;
   }
 }
 

@@ -716,6 +716,11 @@ body.active-modal {
     line-height: 1;
   }
 
+.btn-container .btn {
+    --tw-text-opacity: 1;
+    color: rgb(250 250 249 / var(--tw-text-opacity));
+  }
+
 .content-modal {
   position: fixed;
   left: 50%;
@@ -1044,25 +1049,58 @@ body.active-modal {
     }
 }
 
-.nav-list ul li {
-      margin-bottom: 2.25rem;
-    }
+.close-nav {
+  display: none;
+}
 
-.nav-list ul li {
-      width: -moz-max-content;
-      width: max-content;
-    }
+.nav-list nav {
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+.nav-list nav {
+    transition-delay: 150ms;
+  }
+
+.nav-list nav {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.nav-list nav ul li {
+        width: 100%;
+      }
+
+.nav-list nav ul li {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+.nav-list nav ul li {
+        text-align: center;
+      }
+
+.nav-list.open {
+    height: 100vh;
+  }
 
 @media (min-width: 768px) {
-      .nav-list ul li {
-        margin-bottom: 0px;
-      }
-      .nav-list ul li {
-        margin-left: 1.25rem;
-      }
-        .nav-list ul li:first-child {
-          margin-left: 0px;
+        .nav-list nav ul li {
+          margin-bottom: 0px;
         }
+        .nav-list nav ul li {
+          margin-left: 0.75rem;
+        }
+        .nav-list nav ul li {
+          width: auto;
+        }
+        .nav-list nav ul li {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+          .nav-list nav ul li:first-child {
+            margin-left: 0px;
+          }
 }
 
 .form {
@@ -2579,6 +2617,10 @@ body.active-modal {
   right: 0px;
 }
 
+.right-6 {
+  right: 1.5rem;
+}
+
 .right-\[9px\] {
   right: 9px;
 }
@@ -2589,6 +2631,10 @@ body.active-modal {
 
 .top-1\/2 {
   top: 50%;
+}
+
+.top-6 {
+  top: 1.5rem;
 }
 
 .top-\[10px\] {
@@ -2730,6 +2776,10 @@ body.active-modal {
 
 .mt-\[20px\] {
   margin-top: 20px;
+}
+
+.mt-\[-76px\] {
+  margin-top: -76px;
 }
 
 .block {
@@ -2876,6 +2926,11 @@ body.active-modal {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-90 {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2895,6 +2950,10 @@ body.active-modal {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-row {
@@ -2955,6 +3014,10 @@ body.active-modal {
 
 .gap-\[3px\] {
   gap: 3px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-2xl {
@@ -3107,6 +3170,11 @@ body.active-modal {
   padding-right: 3rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -3130,11 +3198,6 @@ body.active-modal {
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .\!pt-5 {
@@ -3486,6 +3549,10 @@ body.active-modal {
     display: flex;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-10 {
     height: 2.5rem;
   }
@@ -3540,6 +3607,10 @@ body.active-modal {
 
   .md\:max-w-\[290px\] {
     max-width: 290px;
+  }
+
+  .md\:max-w-\[890px\] {
+    max-width: 890px;
   }
 
   .md\:max-w-full {

@@ -1,16 +1,27 @@
+.close-nav {
+  @apply hidden;
+}
+
 .nav-list {
+  nav {
+    @apply transition-[height] delay-150 ease-in-out;
     ul {
       li {
-        @apply mb-9 w-max;
+        @apply py-4 w-full text-center;
       }
     }
   }
+  &.open {
+    height: 100vh;
+  }
+}
 
-  @media (min-width: 768px) {
-    .nav-list {
+@media (min-width: 768px) {
+  .nav-list {
+    nav {
       ul {
         li {
-          @apply mb-0 ml-5;
+          @apply mb-0 ml-3 w-auto py-0;
           &:first-child {
             @apply ml-0;
           }
@@ -18,3 +29,4 @@
       }
     }
   }
+}

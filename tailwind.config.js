@@ -55,7 +55,11 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'height': 'height',
+      }
+    },
   },
   plugins: [],
 }

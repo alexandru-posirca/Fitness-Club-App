@@ -12,6 +12,7 @@
     <script src="js/multistep-form.js" defer type="module"></script>
     <script src="js/my-account.js" defer type="module"></script>
     <script src="js/info-list.js" defer type="module"></script>
+    <script src="js/nav.js" defer type="module"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="min-h-[100vh] bg-black-main font-inter text-white-main">
@@ -19,33 +20,40 @@
     <!-- Header Section -->
 
     <header class="content md:fixed md:inset-x-0 md:top-0 md:z-10 md:w-full md:bg-black-main md:py-3">
-      <div class="mt-[20px] items-center justify-between uppercase md:mt-0 md:flex">
+      <div class="mt-[20px] items-center justify-between uppercase md:mt-0 md:flex md:items-center">
         <div class="mb-6 text-[11.5vw] md:mb-0 md:text-base">
-          <img src="./img/favicon.png" alt="logo-website" width="32" height="32">
+          <div>
+            <img src="./img/favicon.png" alt="logo-website" width="32" height="32">
+          </div>
+          <div class="nav-toggle absolute top-6 right-6 md:hidden cursor-pointer" id="navToggle">
+            <img class="bg-white-main rounded-full rotate-180 nav-icon p-1" id="hamburger" src="./img/arrow-top.png" alt="arrow-menu" width="32" height="32">
+            <img class="bg-white-main rounded-full close-nav nav-icon p-1" src="./img/arrow-top.png" alt="arrow-menu" width="32" height="32">
+          </div>
         </div>
-        <div class="nav-list">
+        <div class="nav-list h-0 w-full overflow-hidden md:h-auto flex justify-center items-center mt-[-76px] md:mt-0 md:justify-end md:max-w-[890px]">
           <nav>
-            <ul class="mb-12 text-2xl md:mb-0 md:flex md:text-sm">
+            <ul class="mb-12 text-2xl md:mb-0 md:flex md:text-sm md:items-center">
               <li><a href="#workouts">Workout</a></li>
               <li><a href="#programs">Programs</a></li>
               <li><a href="#healthy">Healthy Living</a></li>
               <li><a href="#comunity">Comunity</a></li>
               <li><a href="#about">About</a></li>
               <li><button data-modal-account="#modal-join-account" data-info="false" class="uppercase font-semibold text-gray-light-100" id="data-account">My Account</button></li>
+              <li>
+                <div class="hidden btn-container" id="login">
+                  <button class="btn bg-green-200" data-modal-target="#modal-join-club">Log in</button>
+                </div>
+                <div class="hidden btn-container" id="logout">
+                  <button class="btn bg-brown" id="logout-btn">Log out</button>
+                </div>
+              </li>
             </ul>
           </nav>
-        </div>
-        <div class="hidden btn-container" id="login">
-          <button class="btn bg-green-200" data-modal-target="#modal-join-club">Log in</button>
-        </div>
-        <div class="hidden btn-container" id="logout">
-          <button class="btn bg-brown" id="logout-btn">Log out</button>
         </div>
       </div>
     </header>
 
     <!-- End Header Section -->
-
 
      <!-- Modal Info Section -->
 
@@ -647,7 +655,7 @@
                   <h2>Navigate</h2>
                 </div>
                 <ul class="flex justify-center gap-[14px] tracking-normal md:flex-col md:justify-start">
-                  <li><a href="#workouts">Workouts</a></li>
+                  <li><a href="#workouts">Workout</a></li>
                   <li><a href="#programs">Programs</a></li>
                   <li><a href="#healthy">Healthy Living</a></li>
                   <li><a href="#comunity">Comunity</a></li>
