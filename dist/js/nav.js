@@ -5,6 +5,8 @@ const hamburger = document.querySelector("#hamburger");
 
 navToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
+  const navOpen = nav.classList.contains("open");
+  document.body.style.overflow = navOpen ? "hidden" : "auto";
   navIcon.forEach((icon) => {
     icon.classList.toggle("close-nav");
   });
