@@ -2887,6 +2887,10 @@ body.active-modal {
   max-width: 800px;
 }
 
+.max-w-\[325px\] {
+  max-width: 325px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
